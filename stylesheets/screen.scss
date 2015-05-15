@@ -380,6 +380,8 @@ a.button {
 /*** layout ***/
 html {}
 body { margin: 0; }
+
+/*** nav and header ***/
 nav#fixed {
   position: fixed;
   top: 0px;
@@ -402,8 +404,8 @@ nav#fixed {
       background-repeat: no-repeat;
       font-size: 0;
       display: inline-block;
-      width: 240px;
-      height: 50px;
+      width: 180px;
+      height: 36px;
       margin: auto;
       margin-top: 14px;
       @media screen and (max-width: 520px){
@@ -484,10 +486,10 @@ header {
     background-image: image-url('bkgds/bkgd-macdesk.jpg');
   }
   &#Identity {
-    background-image: image-url('bkgds/bkgd-bluespace.jpg');
+    background-image: image-url('bkgds/bkgd-desk.jpg');
   }
   &#Art {
-    background-image: image-url('bkgds/bkgd-bluespace.jpg');
+    background-image: image-url('bkgds/bkgd-crop-circles.jpg');
   }
   background-repeat: no-repeat;
   background-size: cover;
@@ -576,6 +578,8 @@ header {
   }
 }
 
+
+/*** main layout ***/
 section[role=main] {
   padding: 0;
   article {
@@ -654,6 +658,47 @@ section[role=main] {
   }
 }
 
+#index {
+  article.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .flex-image {
+      width: 33%;
+      min-width: 270px;
+      margin: auto;
+      .imac {}
+    }
+    .flex-content {
+      width: 44%;
+      min-width: 300px;
+      margin: auto;
+      @media screen and (max-width: 520px) {
+        margin: 2em auto;
+        h2, h3, h4 {
+          text-align: center;
+        }
+      }
+    }
+    hr {
+      width: 90%;
+      margin: 2em 0 1em 0;
+      border-color: #ddd;
+      color: #ddd;
+      background-color: #ddd;
+      height: 2px;
+      border-width: 0;
+      @media screen and (max-width: 610px) {
+        height: 0;
+        margin: 1em 0;
+      }
+    }
+  }
+}
+
 section {
   &#process {
     .heading {
@@ -690,9 +735,17 @@ section {
       margin: 2em auto;
       padding: 0 15%;
     }
+    article.flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
     .flex-image {
-      width: 150px;
-      min-width: 0;
+      width: 150px !important;
+      min-width: 150px !important;
+      margin: auto;
       @media screen and (min-width: 940px) {
         width: 21%;
         margin: 2em auto;
@@ -700,50 +753,64 @@ section {
     }
     .flex-content {
       width: 60%;
+      margin: auto;
+      @media screen and (max-width: 520px) {
+        margin: 1em auto;
+        width: 100%;
+        h2, h3, h4 {
+          text-align: center;
+        }
+      }
+    }
+    hr {
+      width: 100%;
+      height: 0;
+      margin: 0;
+      border-color: transparent;
+      color: transparent;
+      background-color: transparent;
+      border-width: 0;
     }
   }
 }
 
-article.flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  .flex-image {
-    width: 33%;
-    min-width: 270px;
-    margin: auto;
-    .imac {}
-  }
-  .flex-content {
-    width: 44%;
-    min-width: 300px;
-    margin: auto;
-    @media screen and (max-width: 520px) {
-      margin: 2em auto;
-      h2, h3, h4 {
-        text-align: center;
+#services {
+  .service-list {
+    margin: 2em auto;
+    article {
+      .service {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1em auto;
+        .flex-image {
+          width: 35%;
+          min-width: 140px;
+          max-width: 200px;
+          margin: auto;
+        }
+        .flex-content {
+          width: 60%;
+          max-width: 440px;
+          margin: auto;
+          @media screen and (max-width: 520px) {
+            margin: 1em auto;
+            width: 90%;
+            h2, h3, h4 {
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }
-  hr {
-    width: 90%;
-    margin: 2em 0 1em 0;
-    border-color: #ddd;
-    color: #ddd;
-    background-color: #ddd;
-    height: 2px;
-    border-width: 0;
-    @media screen and (max-width: 610px) {
-      height: 0;
-      margin: 1em 0;
-    }
-  }
-} 
+}
 
 
+/*** footer ***/
 footer {
   background-image: image-url('bkgds/bkgd-tweed.png');
   background-repeat: repeat;
@@ -815,9 +882,5 @@ footer {
     margin: 2em auto 0;
   }
 }
-
-
-
-
 
 
