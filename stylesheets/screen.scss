@@ -478,10 +478,10 @@ header {
     background-image: image-url('bkgds/bkgd-bluespace.jpg');
   }
   &#Services {
-    background-image: image-url('bkgds/bkgd-bluespace.jpg');
+    background-image: image-url('bkgds/bkgd-widelense.jpg');
   }
   &#Interactive {
-    background-image: image-url('bkgds/bkgd-bluespace.jpg');
+    background-image: image-url('bkgds/bkgd-macdesk.jpg');
   }
   &#Identity {
     background-image: image-url('bkgds/bkgd-bluespace.jpg');
@@ -491,6 +491,7 @@ header {
   }
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   text-align: center;
   display: flex;
   align-items: center;
