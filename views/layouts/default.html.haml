@@ -1,0 +1,51 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title "Joshua J. Schmitz, Querycreative"
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    %meta{name: "copyright", content: "Joshua J. Schmitz, Querycreative © 2015"}
+    %meta{name: "description", content: "Joshua J. Schmitz, D/B/A Querycreative, Web Developer"}
+    %meta{name: "keywords", content: "Web Development, Coding, Design, Querycreative, UX/UI"}
+    %meta{name: "DC.title", content: "Joshua J. Schmitz, Querycreative"}
+    %meta{name: "robots", content:"index, follow"}
+
+    -# %meta{name: "google-site-verification", content: "l9sCQlgs_YaLVUuI4qOSaShQc1sV5Sah1gOfkz9ijr4"}
+
+    %link{:href => "/images/favicon/touchicon.png", :rel => "apple-touch-icon"}
+    %link{:href => "/images/favicon/favicon.png", :rel => "icon"}
+      /[if IE] <link rel="shortcut icon" href="favicon.ico">
+    %meta{:content => "#D83434", :name => "msapplication-TileColor"}
+    %meta{:content => "/images/favicon/tileicon.png", :name => "msapplication-TileImage"}
+
+    %link{:href => "/stylesheets/screen.css", :rel => "stylesheet"}
+    
+
+    = render 'layouts/shim'
+
+    %script{src: "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
+    %link{href: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"}
+    %script{src: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"}
+
+    %script{src: "/javascripts/fixed-header.js"}
+
+  %body
+    = render 'partials/nav'
+    %header{:id => @title}
+      %nav#main
+        %h1=link_to @title, "/", class: "header-link"
+        
+        .menu
+          %ul
+            %li= link_to "Services", "/services"
+            %li= link_to "Interactive", "/interactive"
+            %li= link_to "Identity", "/identity"
+            %li= link_to "Art", "/art"
+            %li= link_to "Resume", "/images/pdfs/resume.pdf"
+            %li= link_to "Contact", "mailto:josh.schmitz@querycreative.net", class: "airplane-icon"
+
+    %section{:role => "main", :id => @page}
+      = yield
+
+  
+    = render 'partials/footer'
