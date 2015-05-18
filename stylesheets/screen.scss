@@ -410,6 +410,9 @@ nav#fixed {
     align-content: space-between;
     justify-content: center;
     flex-wrap: wrap;
+    @media screen and (max-width: 520px){
+      flex-direction: column;
+    }
     #logo {
       background-image: image-url('ui/logo.png');
       background-size: contain;
@@ -1194,6 +1197,7 @@ section {
             background-repeat: no-repeat;height: 50vw;
             box-sizing: border-box;
             background-origin: border-box;
+            background-position: center top;
             transition: 0.2s ease;
             border: 25vw solid rgba(0,0,0,0.7);
             @media screen and (max-width: 520px){
@@ -1439,7 +1443,7 @@ section {
       h2 {
         font-size: 10vw;
         margin: 0 auto;
-        line-height: 1;
+        line-height: 1.2;
         background-color: rgba(0,0,0,.2);
       }
       h4 {
@@ -1687,6 +1691,113 @@ section {
         .sb:focus::after {
           font-size: 0;
         }
+
+        .hers {
+          background-image: image-url('portfolio/id/discovery-logos/hers-shirts.png');
+        }
+        .hers::after {
+          content: 'Hers';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -5vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -9vw;
+          }
+        }
+        .hers:hover::after,
+        .hers:focus::after {
+          font-size: 0;
+        }
+        .fgdp {
+          background-image: image-url('portfolio/id/discovery-logos/planetarium-logo-progression.png');
+        }
+        .fgdp::after {
+          content: 'FGDP';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -5vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -9vw;
+          }
+        }
+        .fgdp:hover::after,
+        .fgdp:focus::after {
+          font-size: 0;
+        }
+        .srebla {
+          background-image: image-url('portfolio/id/discovery-logos/srebla-labels.png');
+        }
+        .srebla::after {
+          content: 'SVCV';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -5vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -9vw;
+          }
+        }
+        .srebla:hover::after,
+        .srebla:focus::after {
+          font-size: 0;
+        }
+        .soda {
+          background-image: image-url('portfolio/id/discovery-logos/sodas.png');
+        }
+        .soda::after {
+          content: 'Soda';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -5vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -9vw;
+          }
+        }
+        .soda:hover::after,
+        .soda:focus::after {
+          font-size: 0;
+        }
+
+
         .flex-content {
           width: 35%;
           @media screen and (max-width: 520px){
@@ -1786,10 +1897,10 @@ section {
       padding: 5%;
       background-color: #333;
       .slick-prev {
-        left: 1%;
+        left: 3%;
       }
       .slick-next {
-        right: 1%;
+        right: 3%;
       }
       .slick-dots {
         bottom: -10px;
