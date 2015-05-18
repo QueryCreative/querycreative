@@ -731,6 +731,11 @@ nav#fixed .flex {
   justify-content: center;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 520px) {
+  nav#fixed .flex {
+    flex-direction: column;
+  }
+}
 nav#fixed .flex #logo {
   background-image: url('../images/ui/logo.png?1430855741');
   background-size: contain;
@@ -1560,6 +1565,7 @@ section#process article .processee .implementation::before {
   height: 50vw;
   box-sizing: border-box;
   background-origin: border-box;
+  background-position: center top;
   transition: 0.2s ease;
   border: 25vw solid rgba(0, 0, 0, 0.7);
   position: relative;
@@ -1800,7 +1806,7 @@ section#process article .processee .implementation::before {
 #identity .discovery .heading h2 {
   font-size: 10vw;
   margin: 0 auto;
-  line-height: 1;
+  line-height: 1.2;
   background-color: rgba(0, 0, 0, 0.2);
 }
 #identity .discovery .heading h4 {
@@ -2055,6 +2061,118 @@ section#process article .processee .implementation::before {
 #identity .discovery article .identity-discovery .sb:focus::after {
   font-size: 0;
 }
+#identity .discovery article .identity-discovery .hers {
+  background-image: url('../images/portfolio/id/discovery-logos/hers-shirts.png?1431973490');
+}
+#identity .discovery article .identity-discovery .hers::after {
+  content: 'Hers';
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  font-family: 'Bebas', Helvetica, sans-serif;
+  font-size: 7vw;
+  display: block;
+  position: absolute;
+  top: -5vw;
+  left: -5vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+@media screen and (max-width: 520px) {
+  #identity .discovery article .identity-discovery .hers::after {
+    font-size: 12vw;
+    left: -9vw;
+  }
+}
+#identity .discovery article .identity-discovery .hers:hover::after,
+#identity .discovery article .identity-discovery .hers:focus::after {
+  font-size: 0;
+}
+#identity .discovery article .identity-discovery .fgdp {
+  background-image: url('../images/portfolio/id/discovery-logos/planetarium-logo-progression.png?1431972832');
+}
+#identity .discovery article .identity-discovery .fgdp::after {
+  content: 'FGDP';
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  font-family: 'Bebas', Helvetica, sans-serif;
+  font-size: 7vw;
+  display: block;
+  position: absolute;
+  top: -5vw;
+  left: -5vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+@media screen and (max-width: 520px) {
+  #identity .discovery article .identity-discovery .fgdp::after {
+    font-size: 12vw;
+    left: -9vw;
+  }
+}
+#identity .discovery article .identity-discovery .fgdp:hover::after,
+#identity .discovery article .identity-discovery .fgdp:focus::after {
+  font-size: 0;
+}
+#identity .discovery article .identity-discovery .srebla {
+  background-image: url('../images/portfolio/id/discovery-logos/srebla-labels.png?1431972955');
+}
+#identity .discovery article .identity-discovery .srebla::after {
+  content: 'SVCV';
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  font-family: 'Bebas', Helvetica, sans-serif;
+  font-size: 7vw;
+  display: block;
+  position: absolute;
+  top: -5vw;
+  left: -5vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+@media screen and (max-width: 520px) {
+  #identity .discovery article .identity-discovery .srebla::after {
+    font-size: 12vw;
+    left: -9vw;
+  }
+}
+#identity .discovery article .identity-discovery .srebla:hover::after,
+#identity .discovery article .identity-discovery .srebla:focus::after {
+  font-size: 0;
+}
+#identity .discovery article .identity-discovery .soda {
+  background-image: url('../images/portfolio/id/discovery-logos/sodas.png?1431988197');
+}
+#identity .discovery article .identity-discovery .soda::after {
+  content: 'Soda';
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  font-family: 'Bebas', Helvetica, sans-serif;
+  font-size: 7vw;
+  display: block;
+  position: absolute;
+  top: -5vw;
+  left: -5vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+@media screen and (max-width: 520px) {
+  #identity .discovery article .identity-discovery .soda::after {
+    font-size: 12vw;
+    left: -9vw;
+  }
+}
+#identity .discovery article .identity-discovery .soda:hover::after,
+#identity .discovery article .identity-discovery .soda:focus::after {
+  font-size: 0;
+}
 #identity .discovery article .identity-discovery .flex-content {
   width: 35%;
 }
@@ -2154,10 +2272,10 @@ section#process article .processee .implementation::before {
   background-color: #333;
 }
 #art .photography .slider .slick-prev {
-  left: 1%;
+  left: 3%;
 }
 #art .photography .slider .slick-next {
-  right: 1%;
+  right: 3%;
 }
 #art .photography .slider .slick-dots {
   bottom: -10px;

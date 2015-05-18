@@ -9,8 +9,8 @@
     <meta content='Web Development, Coding, Design, Querycreative, UX/UI' name='keywords'>
     <meta content='Joshua J. Schmitz, Querycreative' name='DC.title'>
     <meta content='index, follow' name='robots'>
-    <link href='/images/favicon/touchicon.png' rel='apple-touch-icon'>
-    <link href='/images/favicon/favicon.png' rel='icon'>
+    <link href='/images/favicon/apple-icon-precomposed.png' rel='apple-touch-icon'>
+    <link href='/images/favicon/favicon.ico' rel='icon'>
       <!--[if IE]> <link rel="shortcut icon" href="favicon.ico"> <![endif]-->
     </link>
     <meta content='#D83434' name='msapplication-TileColor'>
@@ -23,8 +23,10 @@
     <link href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
     <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
     <script src='/javascripts/fixed-header.js'></script>
-    <link href='slick/slick.css' rel='stylesheet'>
-    <link href='slick/slick-theme.css' rel='stylesheet'>
+    <link href='/slick/slick.css' rel='stylesheet'>
+    <link href='/slick/slick-theme.css' rel='stylesheet'>
+    <script src='/lightbox/js/lightbox.min.js'></script>
+    <link href='lightbox/css/lightbox.css' rel='stylesheet'>
   </head>
   <body>
     <nav id='fixed'>
@@ -63,13 +65,19 @@
           <h2>The Metal</h2>
           <div class='flex'>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/metal-arm.jpg" />
+              <a data-lightbox='metal' data-title='The Wolverine' href='/images/portfolio/studio/metal-arm.jpg'>
+                <img src="/images/portfolio/studio/metal-arm.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/rabbid.jpg" />
+              <a data-lightbox='metal' data-title='A Rabbid' href='/images/portfolio/studio/rabbid.jpg'>
+                <img src="/images/portfolio/studio/rabbid.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/speeder.jpg" />
+              <a data-lightbox='metal' data-title='A Speeder' href='/images/portfolio/studio/speeder.jpg'>
+                <img src="/images/portfolio/studio/speeder.jpg" />
+              </a>
             </div>
           </div>
         </article>
@@ -77,31 +85,49 @@
           <h2>Printmaking</h2>
           <div class='flex'>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/cd-print.jpg" />
+              <a data-lightbox='printmaking' data-title='Cinco Discos' href='/images/portfolio/studio/cd-print.jpg'>
+                <img src="/images/portfolio/studio/cd-print.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/polystyrene-dream.jpg" />
+              <a data-lightbox='printmaking' data-title='Polystyrene Dream' href='/images/portfolio/studio/polystyrene-dream.jpg'>
+                <img src="/images/portfolio/studio/polystyrene-dream.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/film.jpg" />
+              <a data-lightbox='printmaking' data-title='Still Frame Life' href='/images/portfolio/studio/film.jpg'>
+                <img src="/images/portfolio/studio/film.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/morpheus.jpg" />
+              <a data-lightbox='printmaking' data-title='The Melancholy Mind of Orpheus' href='/images/portfolio/studio/morpheus.jpg'>
+                <img src="/images/portfolio/studio/morpheus.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/retching-chariot.jpg" />
+              <a data-lightbox='printmaking' data-title="Chair Riots of 'da Gawds" href='/images/portfolio/studio/retching-chariot.jpg'>
+                <img src="/images/portfolio/studio/retching-chariot.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/resting-place.jpg" />
+              <a data-lightbox='printmaking' data-title='Mirror of Torab' href='/images/portfolio/studio/resting-place.jpg'>
+                <img src="/images/portfolio/studio/resting-place.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/collograph.jpg" />
+              <a data-lightbox='printmaking' data-title="When The Moon's Reaching Out" href='/images/portfolio/studio/collograph.jpg'>
+                <img src="/images/portfolio/studio/collograph.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/chernobyl-2.jpg" />
+              <a data-lightbox='printmaking' data-title="Chernobyl Child's Play" href='/images/portfolio/studio/chernobyl-2.jpg'>
+                <img src="/images/portfolio/studio/chernobyl-2.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/beatles.jpg" />
+              <a data-lightbox='printmaking' data-title='The Beatles' href='/images/portfolio/studio/beatles.jpg'>
+                <img src="/images/portfolio/studio/beatles.jpg" />
+              </a>
             </div>
           </div>
         </article>
@@ -109,22 +135,34 @@
           <h2>Mixed Media</h2>
           <div class='flex'>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/Gods-Atomic-Answer-to-Life.jpg" />
+              <a data-lightbox='mixedmedia' data-title="God's Atomic Answer to Life" href='/images/portfolio/studio/Gods-Atomic-Answer-to-Life.jpg'>
+                <img src="/images/portfolio/studio/Gods-Atomic-Answer-to-Life.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/bones.jpg" />
+              <a data-lightbox='mixedmedia' data-title='Bones' href='/images/portfolio/studio/bones.jpg'>
+                <img src="/images/portfolio/studio/bones.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/deductive.jpg" />
+              <a data-lightbox='mixedmedia' data-title='Deductive Still Life' href='/images/portfolio/studio/deductive.jpg'>
+                <img src="/images/portfolio/studio/deductive.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/shoe-or-foot-study.jpg" />
+              <a data-lightbox='mixedmedia' data-title='Leg Study' href='/images/portfolio/studio/shoe-or-foot-study.jpg'>
+                <img src="/images/portfolio/studio/shoe-or-foot-study.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/Tower-of-Lights.jpg" />
+              <a data-lightbox='mixedmedia' data-title='The Falling Tower of Lights' href='/images/portfolio/studio/Tower-of-Lights.jpg'>
+                <img src="/images/portfolio/studio/Tower-of-Lights.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/studio/Monochromatic-Still-Life.jpg" />
+              <a data-lightbox='mixedmedia' data-title='Monochromatic Still Life in Orange' href='/images/portfolio/studio/Monochromatic-Still-Life.jpg'>
+                <img src="/images/portfolio/studio/Monochromatic-Still-Life.jpg" />
+              </a>
             </div>
           </div>
         </article>
@@ -132,31 +170,49 @@
           <h2>Grafik</h2>
           <div class='flex'>
             <div class='flexy'>
-              <img src="/images/portfolio/graphic/wishy-washy.png" />
+              <a data-lightbox='grafik' data-title='Wishy Washy' href='/images/portfolio/graphic/wishy-washy.png'>
+                <img src="/images/portfolio/graphic/wishy-washy.png" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/graphic/gentle-cycle.png" />
+              <a data-lightbox='grafik' data-title='Gentle Cycle' href='/images/portfolio/graphic/gentle-cycle.png'>
+                <img src="/images/portfolio/graphic/gentle-cycle.png" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/graphic/furious.png" />
+              <a data-lightbox='grafik' data-title='Gentle Cycle' href='/images/portfolio/graphic/furious.png'>
+                <img src="/images/portfolio/graphic/furious.png" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/graphic/nuke-bkgd.jpg" />
+              <a data-lightbox='grafik' data-title='Nuclear Destruction' href='/images/portfolio/graphic/nuke-bkgd.jpg'>
+                <img src="/images/portfolio/graphic/nuke-bkgd.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/graphic/queen_sym.jpg" />
+              <a data-lightbox='grafik' data-title="The Queen's Crown" href='/images/portfolio/graphic/queen_sym.jpg'>
+                <img src="/images/portfolio/graphic/queen_sym.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/graphic/simple-things.png" />
+              <a data-lightbox='grafik' data-title='The Simple Things' href='/images/portfolio/graphic/simple-things.png'>
+                <img src="/images/portfolio/graphic/simple-things.png" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/graphic/loveless.jpg" />
+              <a data-lightbox='grafik' data-title='Love in a Loveless World' href='/images/portfolio/graphic/loveless.jpg'>
+                <img src="/images/portfolio/graphic/loveless.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/graphic/john-lennon-type-face-color.jpg" />
+              <a data-lightbox='grafik' data-title='John Lennon Portrait' href='/images/portfolio/graphic/john-lennon-type-face-color.jpg'>
+                <img src="/images/portfolio/graphic/john-lennon-type-face-color.jpg" />
+              </a>
             </div>
             <div class='flexy'>
-              <img src="/images/portfolio/graphic/not.png" />
+              <a data-lightbox='grafik' data-title='You Are Not' href='/images/portfolio/graphic/not.png'>
+                <img src="/images/portfolio/graphic/not.png" />
+              </a>
             </div>
           </div>
         </article>
