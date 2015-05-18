@@ -788,7 +788,7 @@ section {
         }
         .content {
           width: 100%;
-          max-width: 540px;
+          max-width: 600px;
           display: block;
           h2 {
             line-height: 1;
@@ -1186,39 +1186,49 @@ section {
           .flex-transparency {
             width: 50vw;
             text-align: center;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;height: 50vw;
+            box-sizing: border-box;
+            background-origin: border-box;
+            transition: 0.2s ease;
+            border: 25vw solid rgba(0,0,0,0.7);
             @media screen and (max-width: 520px){
-              width: 100%;
-              background-size: cover;
+              height: 100vw;
+              border: 50vw solid rgba(0,0,0,0.7);
+              width: 100vw;
             }
             h2 {
               font-size: 6vw;
               color: #fff;
             }
             position: relative;
-            -webkit-filter: grayscale(90%) brightness(90%);
-            -moz-filter:    grayscale(90%) brightness(90%);
-            -ms-filter:     grayscale(90%) brightness(90%);
-            -o-filter:      grayscale(90%) brightness(90%);
-            filter: gray;
-            transition: filter 1s;
-            -webkit-transition: -webkit-filter .6s;
+            // -webkit-filter: grayscale(90%) brightness(66%);
+            // -moz-filter:    grayscale(90%) brightness(66%);
+            // -ms-filter:     grayscale(90%) brightness(66%);
+            // -o-filter:      grayscale(90%) brightness(66%);
+            // filter: gray;
+            // transition: filter 1s;
+            // -webkit-transition: -webkit-filter .6s;
           }
+          // .flex-transparency:hover,
+          // .flex-transparency:focus {
+          //   -webkit-filter: grayscale(0%);
+          //   -moz-filter:    grayscale(0%);
+          //   -ms-filter:     grayscale(0%);
+          //   -o-filter:      grayscale(0%);
+          //   filter: none;
+          // }
           .flex-transparency:hover,
           .flex-transparency:focus {
-            -webkit-filter: grayscale(0%);
-            -moz-filter:    grayscale(0%);
-            -ms-filter:     grayscale(0%);
-            -o-filter:      grayscale(0%);
-            filter: none;
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -ms-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+            border: 0 solid rgba(0,0,0,0);
           }
           .m2m {
             background-image: image-url('portfolio/web/m2m-site-laptop.png');
-            height: 36vw;
-            @media screen and (max-width: 520px){
-              height: 320px;
-            }
           }
           .m2m::after {
             content: 'M2M';
@@ -1227,18 +1237,24 @@ section {
             font-family: 'Bebas', Helvetica, sans-serif;
             font-size: 7vw;
             display: block;
-            margin-top: 30%;
+            position: absolute;
+            top: -5vw;
+            left: -5vw;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
             @media screen and (max-width: 520px){
-              font-size: 10vw;
-              margin-top: 33%;
+              font-size: 12vw;
+              left: -6vw;
             }
+          }
+          .m2m:hover::after,
+          .m2m:focus::after {
+            font-size: 0;
           }
           .rms {
             background-image: image-url('portfolio/web/rms-site-laptop.png');
-            height: 31vw;
-            @media screen and (max-width: 520px){
-              height: 250px;
-            }
           }
           .rms::after {
             content: 'RMS';
@@ -1247,18 +1263,24 @@ section {
             font-family: 'Bebas', Helvetica, sans-serif;
             font-size: 7vw;
             display: block;
-            margin-top: 23%;
+            position: absolute;
+            top: -5vw;
+            left: -2vw;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
             @media screen and (max-width: 520px){
-              font-size: 10vw;
-              margin-top: 26%;
+              font-size: 12vw;
+              left: -4vw;
             }
+          }
+          .rms:hover::after,
+          .rms:focus::after {
+            font-size: 0;
           }
           .localmize {
             background-image: image-url('portfolio/web/localmize-site-laptop.png');
-            height: 26vw;
-            @media screen and (max-width: 520px){
-              height: 206px;
-            } 
           }
           .localmize::after {
             content: 'LM';
@@ -1267,18 +1289,24 @@ section {
             font-family: 'Bebas', Helvetica, sans-serif;
             font-size: 7vw;
             display: block;
-            margin-top: 20%;
+            position: absolute;
+            top: -5vw;
+            left: -4vw;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
             @media screen and (max-width: 520px){
-              font-size: 10vw;
-              margin-top: 23%;
+              font-size: 12vw;
+              left: -5vw;
             }
+          }
+          .localmize:hover::after,
+          .localmize:focus::after {
+            font-size: 0;
           }
           .ati {
             background-image: image-url('portfolio/web/ati-site-laptop.png'); 
-            height: 28vw;
-            @media screen and (max-width: 520px){
-              height: 224px;
-            }
           }
           .ati::after {
             content: 'ATI';
@@ -1287,11 +1315,21 @@ section {
             font-family: 'Bebas', Helvetica, sans-serif;
             font-size: 7vw;
             display: block;
-            margin-top: 25%;
+            position: absolute;
+            top: -5vw;
+            left: 0;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
             @media screen and (max-width: 520px){
-              font-size: 10vw;
-              margin-top: 28%;
+              font-size: 12vw;
+              left: -4vw;
             }
+          }
+          .ati:hover::after,
+          .ati:focus::after {
+            font-size: 0;
           }
           .flex-content {
             width: 35%;
@@ -1303,6 +1341,18 @@ section {
               font-size: 3vw;
               @media screen and (max-width: 520px){
                 font-size: 6vw;
+                text-align: center;
+              }
+              .site-link {
+                color: inherit;
+                text-decoration: none;
+                font-family: inherit;
+                font-size: inherit;
+                transition: color 1s;
+              }
+              .site-link:hover,
+              .site-link:focus {
+                color: #0099D8;
               }
             }
             p {
@@ -1341,10 +1391,30 @@ section {
       .flex-logo {
         margin: 1em auto;
         width: 30%;
+        -webkit-filter: grayscale(75%) brightness(99%);
+        -moz-filter:    grayscale(75%) brightness(99%);
+        -ms-filter:     grayscale(75%) brightness(99%);
+        -o-filter:      grayscale(75%) brightness(99%);
+        filter: gray;
+        transition: filter 1s;
+        -webkit-transition: -webkit-filter .6s;
         @media screen and (max-width: 520px){
           width: 80%;
         }
         img {}
+      }
+      .flex-logo:hover,
+      .flex-logo:focus {
+        -webkit-filter: grayscale(0%);
+        -moz-filter:    grayscale(0%);
+        -ms-filter:     grayscale(0%);
+        -o-filter:      grayscale(0%);
+        filter: none;
+      }
+    }
+    .mobile-hide {
+      @media screen and (max-width: 520px){
+        display: none;
       }
     }
   }
@@ -1372,31 +1442,272 @@ section {
         font-size: 4vw;
         margin: 0 auto;
         line-height: 1.2;
-        background-color: rgba(0,0,0,.2);
+        background-color: rgba(0,0,0,.3);
       }
     }
     article {
+      padding: 0;
       .identity-discovery {
-        .flex-transparency {
-          h2 {}
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media screen and (max-width: 520px){
+          flex-direction: column;
         }
-        .qc {}
-        .qc::after {}
-        .bb {}
-        .bb::after {}
-        .dd {}
-        .bb::after {}
-        .oc {}
-        .oc::after {}
-        .m2m {}
-        .m2m::after {}
-        .dg {}
-        .dg::after {}
-        .sb {}
-        .sb::after {}
+        .flex-transparency {
+          width: 50vw;
+          text-align: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 50vw;
+          box-sizing: border-box;
+          background-origin: border-box;
+          background-position: center;
+          transition: 0.2s ease;
+          border: 25vw solid rgba(0,0,0,0.7);
+          @media screen and (max-width: 520px){
+            height: 100vw;
+            border: 50vw solid rgba(0,0,0,0.7);
+            width: 100vw;
+          }
+          h2 {
+            font-size: 6vw;
+            color: #fff;
+          }
+          position: relative;
+          // -webkit-filter: grayscale(90%) brightness(66%);
+          // -moz-filter:    grayscale(90%) brightness(66%);
+          // -ms-filter:     grayscale(90%) brightness(66%);
+          // -o-filter:      grayscale(90%) brightness(66%);
+          // filter: gray;
+          // transition: filter 1s;
+          // -webkit-transition: -webkit-filter .6s;
+        }
+        .flex-transparency:hover,
+        .flex-transparency:focus {
+          // -webkit-filter: grayscale(0%);
+          // -moz-filter:    grayscale(0%);
+          // -ms-filter:     grayscale(0%);
+          // -o-filter:      grayscale(0%);
+          // filter: none;
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -ms-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+          border: 0 solid rgba(0,0,0,0);
+        }
+        .qc {
+          background-image: image-url('portfolio/id/discovery-logos/qc-logo-progression.png');
+        }
+        .qc::after {
+          content: 'QC';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -4vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -5vw;
+          }
+        }
+        .qc:hover::after,
+        .qc:focus::after {
+          font-size: 0;
+        }
+        .bb {
+          background-image: image-url('portfolio/id/discovery-logos/b&b-logo-progression.png');
+        }
+        .bb::after {
+          content: 'B&B';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -3vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -8vw;
+          }
+        }
+        .bb:hover::after,
+        .bb:focus::after {
+          font-size: 0;
+        }
+        .dd {
+          background-image: image-url('portfolio/id/discovery-logos/d&d-logo-progression.png');
+        }
+        .dd::after {
+          content: 'D&D';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -4vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -8vw;
+          }
+        }
+        .dd:hover::after,
+        .dd:focus::after {
+          font-size: 0;
+        }
+        .oc {
+          background-image: image-url('portfolio/id/discovery-logos/open-country-logo-progression.png');
+        }
+        .oc::after {
+          content: 'OC';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -1vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -2vw;
+          }
+        }
+        .oc:hover::after,
+        .oc:focus::after {
+          font-size: 0;
+        }
+        .m2m {
+          background-image: image-url('portfolio/id/discovery-logos/m2m-logo-progression.png');
+        }
+        .m2m::after {
+          content: 'M2M';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -5vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -9vw;
+          }
+        }
+        .m2m:hover::after,
+        .m2m:focus::after {
+          font-size: 0;
+        }
+        .dg {
+          background-image: image-url('portfolio/id/discovery-logos/drilling-green-logo-progression.png');
+        }
+        .dg::after {
+          content: 'DG';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -1vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -2vw;
+          }
+        }
+        .dg:hover::after,
+        .dg:focus::after {
+          font-size: 0;
+        }
+        .sb {
+          background-image: image-url('portfolio/id/discovery-logos/strictly-business-logo-progression.png');
+        }
+        .sb::after {
+          content: 'SB';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: 'Bebas', Helvetica, sans-serif;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -2vw;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          @media screen and (max-width: 520px){
+            font-size: 12vw;
+            left: -3vw;
+          }
+        }
+        .sb:hover::after,
+        .sb:focus::after {
+          font-size: 0;
+        }
         .flex-content {
-          h3 {}
-          p {}
+          width: 35%;
+          @media screen and (max-width: 520px){
+            width: 80%;
+            margin: 2em auto;
+          }
+          h3 {
+            font-size: 3vw;
+            @media screen and (max-width: 520px){
+              font-size: 6vw;
+              text-align: center;
+            }
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      @media screen and (min-width: 521px) {
+        .identity-discovery:nth-of-type(2n-1) .flex-content {
+          margin-right: 5%;
+        }
+        .identity-discovery:nth-of-type(2n) .flex-content {
+          margin-left: 5%;
+          order: -1;
         }
       }
     }
@@ -1411,8 +1722,17 @@ footer {
   background-repeat: repeat;
   text-align: center;
   padding: 1em 15% 2em;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  @media screen and (max-width: 850px) {
+    flex-direction: column;
+  }
   .socmed {
-    margin-top: 2em;
+    padding-top: .5em;
+    margin: auto;
     ul {
       list-style: none;
       padding: 0;
@@ -1424,10 +1744,10 @@ footer {
           width: 28px;
           height: 28px;
           background-size: cover;
-          -webkit-filter: grayscale(100%) brightness(200%);
-          -moz-filter:    grayscale(100%) brightness(200%);
-          -ms-filter:     grayscale(100%) brightness(200%);
-          -o-filter:      grayscale(100%) brightness(200%);
+          -webkit-filter: grayscale(100%) brightness(250%);
+          -moz-filter:    grayscale(100%) brightness(250%);
+          -ms-filter:     grayscale(100%) brightness(250%);
+          -o-filter:      grayscale(100%) brightness(250%);
           filter: gray;
           transition: filter 1s;
           -webkit-transition: -webkit-filter .6s;
@@ -1461,7 +1781,6 @@ footer {
           background-image:image-url('soc-med/color/LinkedIn.png');
         }
         a:hover,
-        a:active,
         a:focus {
           -webkit-filter: grayscale(0%);
           -moz-filter:    grayscale(0%);
@@ -1472,9 +1791,45 @@ footer {
       }
     }
   }
+  .contact {
+    margin: auto;
+  }
   .copyright {
     color: #eee;
-    margin: 2em auto 0;
+    margin: auto;
+    @media screen and (max-width: 850px) {
+      margin: 2em auto 1em;
+    }
+  }
+  .backtotop {
+    font-size: 0;
+  }
+  .backtotop::after {
+    content: '';
+    position: absolute;
+    right: 2%;
+    top: 45%;
+    display: block;
+    width: 32px;
+    height: 17px;
+    background-image: image-url('ui/backtotop-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-filter: grayscale(80%) brightness(100%);
+    -moz-filter:    grayscale(80%) brightness(100%);
+    -ms-filter:     grayscale(80%) brightness(100%);
+    -o-filter:      grayscale(80%) brightness(100%);
+    filter: gray;
+    transition: filter 1s;
+    -webkit-transition: -webkit-filter .6s;
+  }
+  .backtotop:hover::after,
+  .backtotop:focus::after {
+    -webkit-filter: grayscale(0%);
+    -moz-filter:    grayscale(0%);
+    -ms-filter:     grayscale(0%);
+    -o-filter:      grayscale(0%);
+    filter: none;  
   }
 }
 
