@@ -215,6 +215,8 @@ q:before {
   content: "\275D";
   font-size: 90%;
   padding-right: 0.2em;
+  position: relative;
+  top: -2px;
 }
 blockquote:after,
 .quote:after,
@@ -222,6 +224,8 @@ q:after {
   content: "\275E";
   font-size: 90%;
   padding-left: 0.2em;
+  position: relative;
+  top: -2px;
 }
 
 /**** quick styles ****/
@@ -1713,6 +1717,104 @@ section {
     }
   }
 }
+
+#art {
+  .studio {
+    article {
+      h2 {
+        font-size: 7vw;
+        text-align: center;
+        margin: 1em auto 0;
+        @media screen and (max-width: 520px){
+          font-size: 10vw;
+        }
+      }
+      .flex {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media screen and (max-width: 520px){
+          flex-direction: column;
+        }
+        .flexy {
+          margin: 40px auto;
+          width: 28%;
+          -webkit-filter: grayscale(70%) brightness(90%);
+          -moz-filter:    grayscale(70%) brightness(90%);
+          -ms-filter:     grayscale(70%) brightness(90%);
+          -o-filter:      grayscale(70%) brightness(90%);
+          filter: gray;
+          transition: filter 1s;
+          -webkit-transition: -webkit-filter .6s;
+          @media screen and (max-width: 520px){
+            width: 90%
+          }
+        }
+        .flexy:hover,
+        .flexy:focus {
+          -webkit-filter: grayscale(0%);
+          -moz-filter:    grayscale(0%);
+          -ms-filter:     grayscale(0%);
+          -o-filter:      grayscale(0%);
+          filter: none;
+        }
+      }
+    }
+  }
+
+  .photography {
+    h2 {
+      display: block;
+      color: #fff;
+      padding: 20vw 0;
+      font-size: 10vw;
+      text-align: center;
+      width: 100%;
+      background-image: image-url('bkgds/bkgd-forrest.jpg');
+      background-position: center center;
+      background-size: cover;
+      margin: 0 auto;
+    }
+    .slick-slider {
+      margin-bottom: 0;
+    }
+    .slider {
+      padding: 5%;
+      background-color: #333;
+      .slick-prev {
+        left: 1%;
+      }
+      .slick-next {
+        right: 1%;
+      }
+      .slick-dots {
+        bottom: -10px;
+        left: 0;
+      }
+      .slide {
+        .image{
+          margin: 0 auto;
+          max-width: 600px;
+          .caption {
+            text-align: right;
+            color: #fff;
+            h5 {
+              color: #fff;
+              .quote {
+                font-family: inherit;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /*** 
 footer 
