@@ -754,15 +754,19 @@ nav#fixed .flex {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
-  align-items: center;
-  align-content: space-between;
+  -webkit-align-items: center;
+  align-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 @media (max-width: 520px) {
   nav#fixed .flex {
-    flex-direction: column;
+    display: block;
+    margin: 0 auto;
   }
 }
 nav#fixed .flex #logo {
@@ -789,8 +793,8 @@ nav#fixed .flex #logo {
   nav#fixed .flex #logo {
     width: 160px;
     height: 32px;
-    margin: 0;
-    margin-top: 15px;
+    display: block;
+    margin: 15px auto 0;
   }
 }
 nav#fixed .flex .menu {
@@ -806,6 +810,13 @@ nav#fixed .flex .menu {
   order: 0;
   color: #242424;
   margin: auto;
+}
+@media (max-width: 520px) {
+  nav#fixed .flex .menu {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 nav#fixed .flex .menu ul {
   padding: 0;
@@ -972,6 +983,9 @@ header nav#main .menu ul li ~ li {
 }
 
 @media (max-width: 520px) {
+  header nav#main .menu {
+    padding: 0;
+  }
   header nav#main .menu ul li {
     display: block;
   }
@@ -1097,6 +1111,11 @@ section[role=main] article {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+@media (max-width: 520px) {
+  #index article.flex {
+    display: block;
+  }
+}
 #index article.flex .flex-image {
   -webkit-box-flex: 0 1 auto;
   -moz-box-flex: 0 1 auto;
@@ -1112,6 +1131,14 @@ section[role=main] article {
   min-width: 270px;
   max-width: 420px;
   margin: auto;
+}
+@media (max-width: 520px) {
+  #index article.flex .flex-image {
+    margin: 1em auto;
+    display: block;
+    width: 90%;
+    text-align: center;
+  }
 }
 #index article.flex .flex-content {
   -webkit-box-flex: 0 1 auto;
@@ -1131,6 +1158,8 @@ section[role=main] article {
 @media (max-width: 520px) {
   #index article.flex .flex-content {
     margin: 2em auto;
+    display: block;
+    width: 90%;
   }
   #index article.flex .flex-content h2, #index article.flex .flex-content h3, #index article.flex .flex-content h4 {
     text-align: center;
@@ -1228,6 +1257,7 @@ section#process article .processee .content h2, section#process article .process
   }
   section#process article .processee .content h2, section#process article .processee section[role=main] > article h2, section#process article .processee .content h3, section#process article .processee section[role=main] > article h3, section#process article .processee .content h4, section#process article .processee section[role=main] > article h4 {
     text-align: center;
+    font-size: 30px;
   }
 }
 section#process article .processee .ideation::before {
@@ -2562,6 +2592,7 @@ footer .socmed ul li a {
   width: 28px;
   height: 28px;
   background-size: cover;
+  background-repeat: no-repeat;
   -webkit-filter: grayscale(100%) brightness(250%);
   -moz-filter: grayscale(100%) brightness(250%);
   -ms-filter: grayscale(100%) brightness(250%);
