@@ -270,6 +270,28 @@ body > footer p {
   margin: 1em 0;
 }
 
+/* flexy as fuck */
+.flex-boxer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flexed {
+  -webkit-box-flex: 1 200px;
+  -moz-box-flex: 1 200px;
+  -webkit-flex: 1 200px;
+  -ms-flex: 1 200px;
+  flex: 1 200px;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
+}
+
 /*  animations */
 @-webkit-keyframes animatedBackground {
   0% {
@@ -724,6 +746,10 @@ nav#fixed {
   }
 }
 nav#fixed .flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -821,6 +847,10 @@ header {
   background-size: cover;
   background-position: center;
   text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   align-content: center;
@@ -981,12 +1011,15 @@ section[role=main] article {
   content: '';
   display: block;
   position: absolute;
-  top: 40px;
-  left: 103px;
-  width: 100px;
-  height: 100px;
+  top: 50px;
+  left: 105px;
+  width: 69px;
+  height: 69px;
   background-image: url('../images/external-logos/firespring-symbol-light.png?1431823426');
   background-size: contain;
+}
+#index section.work .imac {
+  width: 400px;
 }
 #index section.upcoming {
   background-image: url('../images/bkgds/bkgd-noise.gif?1418751346');
@@ -1008,6 +1041,10 @@ section[role=main] article {
 }
 
 #index article.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1098,7 +1135,7 @@ section#process article {
 }
 @media screen and (min-width: 1150px) {
   section#process article {
-    padding: 0 30%;
+    padding: 0 26%;
   }
 }
 section#process article .processee {
@@ -1545,6 +1582,10 @@ section#process article .processee .implementation::before {
 }
 #interactive section.websites article .site {
   padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1745,6 +1786,10 @@ section#process article .processee .implementation::before {
 }
 
 #identity .logos .flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -1820,6 +1865,10 @@ section#process article .processee .implementation::before {
 }
 #identity .discovery article .identity-discovery {
   padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2216,6 +2265,10 @@ section#process article .processee .implementation::before {
 }
 #art .studio article .flex {
   padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2305,6 +2358,10 @@ footer {
   text-align: center;
   padding: 1em 15% 2em;
   position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;

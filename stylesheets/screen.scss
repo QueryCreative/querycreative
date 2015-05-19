@@ -20,6 +20,7 @@
 @import "partials/base";
 @import "partials/content";
 @import "partials/layout";
+@import "partials/mixins";
 
 
 /*  animations */
@@ -404,7 +405,7 @@ nav#fixed {
     height: 85px;
   }
   .flex {
-    display: flex;
+    @include flexbox();
     flex-direction: row;
     align-items: center;
     align-content: space-between;
@@ -510,7 +511,7 @@ header {
   background-size: cover;
   background-position: center;
   text-align: center;
-  display: flex;
+  @include flexbox();
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -670,12 +671,15 @@ section[role=main] {
         content: '';
         display: block;
         position: absolute;
-        top: 40px;
-        left: 103px;
-        width: 100px;
-        height: 100px;
+        top: 50px;
+        left: 105px;
+        width: 69px;
+        height: 69px;
         background-image: image-url('external-logos/firespring-symbol-light.png');
         background-size: contain;
+      }
+      .imac {
+        width: 400px;
       }
     }
     &.upcoming {
@@ -701,7 +705,7 @@ section[role=main] {
 
 #index {
   article.flex {
-    display: flex;
+    @include flexbox();
     flex-direction: row;
     align-items: center;
     align-content: center;
@@ -786,7 +790,7 @@ section {
         padding: 0 20%;
       }
       @media screen and (min-width: 1150px) {
-        padding: 0 30%;
+        padding: 0 26%;
       }
       .processee {
         margin: 4em auto;
@@ -1181,7 +1185,7 @@ section {
         padding: 0;
         .site {
           padding: 0;
-          display: flex;
+          @include flexbox();
           flex-direction: row;
           align-items: center;
           align-content: center;
@@ -1385,7 +1389,7 @@ section {
 #identity {
   .logos {
     .flex {
-      display: flex;
+      @include flexbox();
       flex-wrap: wrap;
       flex-direction: row;
       @media screen and (max-width: 520px){
@@ -1457,7 +1461,7 @@ section {
       padding: 0;
       .identity-discovery {
         padding: 0;
-        display: flex;
+        @include flexbox();
         flex-direction: row;
         align-items: center;
         align-content: center;
@@ -1842,7 +1846,7 @@ section {
       }
       .flex {
         padding: 0;
-        display: flex;
+        @include flexbox();
         flex-direction: row;
         align-items: center;
         align-content: center;
@@ -1936,7 +1940,7 @@ footer {
   text-align: center;
   padding: 1em 15% 2em;
   position: relative;
-  display: flex;
+  @include flexbox();
   justify-content: space-around;
   flex-wrap: nowrap;
   flex-direction: row;
