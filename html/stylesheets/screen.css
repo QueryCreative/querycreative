@@ -270,8 +270,10 @@ body > footer p {
   margin: 1em 0;
 }
 
+/** mixins, vars, prefixes and animation keyframes **/
 /* flexy as fuck */
-.flex-boxer {
+/* example classes - for use or reference */
+.flex-box {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -279,12 +281,12 @@ body > footer p {
   display: flex;
 }
 
-.flexed {
-  -webkit-box-flex: 1 200px;
-  -moz-box-flex: 1 200px;
-  -webkit-flex: 1 200px;
-  -ms-flex: 1 200px;
-  flex: 1 200px;
+.inflex {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   -webkit-box-ordinal-group: 0;
   -moz-box-ordinal-group: 0;
   -ms-flex-order: 0;
@@ -292,6 +294,7 @@ body > footer p {
   order: 0;
 }
 
+/* breakpoints, obviously */
 /*  animations */
 @-webkit-keyframes animatedBackground {
   0% {
@@ -740,7 +743,7 @@ nav#fixed {
   z-index: 9999;
   display: none;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   nav#fixed {
     height: 85px;
   }
@@ -757,23 +760,32 @@ nav#fixed .flex {
   justify-content: center;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   nav#fixed .flex {
     flex-direction: column;
   }
 }
 nav#fixed .flex #logo {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   background-image: url('../images/ui/logo.png?1430855741');
   background-size: contain;
   background-repeat: no-repeat;
   font-size: 0;
-  display: inline-block;
   width: 180px;
   height: 36px;
   margin: auto;
   margin-top: 14px;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   nav#fixed .flex #logo {
     width: 160px;
     height: 32px;
@@ -782,6 +794,16 @@ nav#fixed .flex #logo {
   }
 }
 nav#fixed .flex .menu {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   color: #242424;
   margin: auto;
 }
@@ -790,7 +812,7 @@ nav#fixed .flex .menu ul {
   margin: 1em auto;
   list-style: none;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   nav#fixed .flex .menu ul {
     margin: 10px auto;
   }
@@ -804,7 +826,7 @@ nav#fixed .flex .menu ul li a {
   text-decoration: none;
   transition: color .5s;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   nav#fixed .flex .menu ul li a {
     font-size: 4vw;
   }
@@ -827,7 +849,7 @@ nav#fixed .flex .menu ul li .airplane-icon::after {
   margin-right: .5em;
   top: 3px;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   nav#fixed .flex .menu ul li .airplane-icon::after {
     height: 3.5vw;
     width: 3.5vw;
@@ -872,8 +894,18 @@ header#Identity {
 header#Art {
   background-image: url('../images/bkgds/bkgd-crop-circles.jpg?1431128034');
 }
-header nav#main h1 {
-  margin: 0;
+header nav#main {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
+  margin: 0 auto;
 }
 header nav#main h1 a {
   font-size: 10vw;
@@ -884,6 +916,16 @@ header nav#main h1 a {
   text-shadow: 4px 3px 0px rgba(0, 0, 0, 0.3);
 }
 header nav#main .menu {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   color: #fff;
   background-color: rgba(40, 40, 40, 0.1);
   padding: 1em 2em;
@@ -929,7 +971,7 @@ header nav#main .menu ul li ~ li {
   margin-left: 1vw;
 }
 
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   header nav#main .menu ul li {
     display: block;
   }
@@ -955,7 +997,7 @@ section[role=main] article {
 #index section h2 {
   font-size: 7vw;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #index section h2 {
     font-size: 5vw;
   }
@@ -973,7 +1015,7 @@ section[role=main] article {
 #index section.whois p {
   font-size: 2vw;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #index section.whois p {
     font-size: 3vw;
   }
@@ -1053,17 +1095,37 @@ section[role=main] article {
   flex-wrap: wrap;
 }
 #index article.flex .flex-image {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   width: 33%;
   min-width: 270px;
   max-width: 420px;
   margin: auto;
 }
 #index article.flex .flex-content {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   width: 44%;
   min-width: 300px;
   margin: auto;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #index article.flex .flex-content {
     margin: 2em auto;
   }
@@ -1098,7 +1160,7 @@ section#process .heading {
   background-attachment: fixed;
   background-size: cover;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   section#process .heading {
     padding: 16vw 0;
   }
@@ -1113,7 +1175,7 @@ section#process .heading h4 {
   margin: 0 auto;
   line-height: 1.2;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   section#process .heading h4 {
     font-size: 3vw;
   }
@@ -1141,7 +1203,7 @@ section#process article {
 section#process article .processee {
   margin: 4em auto;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   section#process article .processee {
     margin: 1em auto;
   }
@@ -1156,7 +1218,7 @@ section#process article .processee .content h2, section#process article .process
   margin: 0;
   font-size: 5vw;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   section#process article .processee .content, section#process article .processee section[role=main] > article {
     width: 100%;
     float: none;
@@ -1176,7 +1238,7 @@ section#process article .processee .ideation::before {
   margin-right: 3em;
   margin-bottom: 4em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   section#process article .processee .ideation::before {
     float: none;
     margin: 2em auto;
@@ -1193,7 +1255,7 @@ section#process article .processee .inspiration::before {
   margin-right: 3em;
   margin-bottom: 4em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   section#process article .processee .inspiration::before {
     float: none;
     margin: 2em auto;
@@ -1210,7 +1272,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 4em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   section#process article .processee .implementation::before {
     float: none;
     margin: 2em auto;
@@ -1246,7 +1308,7 @@ section#process article .processee .implementation::before {
   line-height: 1;
   margin: 0;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service .content, #services .service-list article .service section[role=main] > article {
     margin: 2em auto;
   }
@@ -1271,7 +1333,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.strategy::before {
     margin: 2em auto;
     float: none;
@@ -1288,7 +1350,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.identity::before {
     margin: 2em auto;
     float: none;
@@ -1305,7 +1367,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.design::before {
     margin: 2em auto;
     float: none;
@@ -1322,7 +1384,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.campaign::before {
     margin: 2em auto;
     float: none;
@@ -1339,7 +1401,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.production::before {
     margin: 2em auto;
     float: none;
@@ -1356,7 +1418,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.development::before {
     margin: 2em auto;
     float: none;
@@ -1373,7 +1435,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.mobile::before {
     margin: 2em auto;
     float: none;
@@ -1390,7 +1452,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.cms::before {
     margin: 2em auto;
     float: none;
@@ -1407,7 +1469,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.seo::before {
     margin: 2em auto;
     float: none;
@@ -1424,7 +1486,7 @@ section#process article .processee .implementation::before {
   margin-right: 3em;
   margin-bottom: 6em;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #services .service-list article .service.socmed::before {
     margin: 2em auto;
     float: none;
@@ -1452,7 +1514,7 @@ section#process article .processee .implementation::before {
   position: relative;
   z-index: 0;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.work article .firespring {
     background-image: none;
     width: 80px;
@@ -1470,14 +1532,14 @@ section#process article .processee .implementation::before {
   position: absolute;
   z-index: 10;
 }
-@media screen and (min-width: 521px) {
+@media (min-width: 521px) {
   #interactive section.work article .firespring::after {
     top: 30px;
     left: 78px;
     background-image: url('../images/external-logos/firespring-symbol-light.png?1431823426');
   }
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.work article .firespring::after {
     background-image: url('../images/external-logos/firespring-symbol-dark.png?1431823620');
   }
@@ -1494,22 +1556,22 @@ section#process article .processee .implementation::before {
   z-index: 1;
   top: 35px;
 }
-@media screen and (min-width: 521px) {
+@media (min-width: 521px) {
   #interactive section.work article .querycreative {
     right: 26%;
   }
 }
-@media screen and (min-width: 740px) {
+@media (min-width: 740px) {
   #interactive section.work article .querycreative {
     right: 33%;
   }
 }
-@media screen and (min-width: 1240px) {
+@media (min-width: 1240px) {
   #interactive section.work article .querycreative {
     right: 38%;
   }
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.work article .querycreative {
     background-image: none;
     display: none;
@@ -1526,14 +1588,14 @@ section#process article .processee .implementation::before {
   position: absolute;
   z-index: 10;
 }
-@media screen and (min-width: 521px) {
+@media (min-width: 521px) {
   #interactive section.work article .querycreative::after {
     top: 64px;
     left: 9px;
     background-image: url('../images/external-logos/qc-symbol.png?1431823426');
   }
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.work article .querycreative::after {
     background-image: none;
     display: none;
@@ -1543,7 +1605,7 @@ section#process article .processee .implementation::before {
   text-align: center;
   padding: 0 15%;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.work article .content, #interactive section.work article section[role=main] > article {
     padding: 0 5%;
   }
@@ -1556,7 +1618,7 @@ section#process article .processee .implementation::before {
 #interactive section.work article .content p, #interactive section.work article section[role=main] > article p {
   font-size: 2vw;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.work article .content p, #interactive section.work article section[role=main] > article p {
     font-size: 3vw;
   }
@@ -1593,12 +1655,22 @@ section#process article .processee .implementation::before {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.websites article .site {
     flex-direction: column;
   }
 }
 #interactive section.websites article .site .flex-transparency {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   width: 50vw;
   text-align: center;
   background-size: cover;
@@ -1607,11 +1679,15 @@ section#process article .processee .implementation::before {
   box-sizing: border-box;
   background-origin: border-box;
   background-position: center top;
-  transition: 0.2s ease;
+  -webkit-transition: 0.4s ease-in;
+  -moz-transition: 0.4s ease-in;
+  -ms-transition: 0.4s ease-in;
+  -o-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
   border: 25vw solid rgba(0, 0, 0, 0.7);
   position: relative;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.websites article .site .flex-transparency {
     height: 100vw;
     border: 50vw solid rgba(0, 0, 0, 0.7);
@@ -1624,11 +1700,11 @@ section#process article .processee .implementation::before {
 }
 #interactive section.websites article .site .flex-transparency:hover,
 #interactive section.websites article .site .flex-transparency:focus {
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -ms-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+  -ms-transition: 0.8s ease;
+  -o-transition: 0.8s ease;
+  transition: 0.8s ease;
   border: 0 solid transparent;
 }
 #interactive section.websites article .site .m2m {
@@ -1649,7 +1725,7 @@ section#process article .processee .implementation::before {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.websites article .site .m2m::after {
     font-size: 12vw;
     left: -6vw;
@@ -1677,7 +1753,7 @@ section#process article .processee .implementation::before {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.websites article .site .rms::after {
     font-size: 12vw;
     left: -4vw;
@@ -1705,7 +1781,7 @@ section#process article .processee .implementation::before {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.websites article .site .localmize::after {
     font-size: 12vw;
     left: -5vw;
@@ -1733,7 +1809,7 @@ section#process article .processee .implementation::before {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.websites article .site .ati::after {
     font-size: 12vw;
     left: -4vw;
@@ -1744,9 +1820,19 @@ section#process article .processee .implementation::before {
   font-size: 0;
 }
 #interactive section.websites article .site .flex-content {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   width: 35%;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.websites article .site .flex-content {
     width: 80%;
     margin: 2em auto;
@@ -1755,7 +1841,7 @@ section#process article .processee .implementation::before {
 #interactive section.websites article .site .flex-content h3 {
   font-size: 3vw;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #interactive section.websites article .site .flex-content h3 {
     font-size: 6vw;
     text-align: center;
@@ -1775,12 +1861,16 @@ section#process article .processee .implementation::before {
 #interactive section.websites article .site .flex-content p {
   font-size: 12px;
 }
-@media screen and (min-width: 521px) {
+@media (min-width: 521px) {
   #interactive section.websites article .site:nth-of-type(2n-1) .flex-content {
     margin-right: 5%;
   }
   #interactive section.websites article .site:nth-of-type(2n) .flex-content {
     margin-left: 5%;
+    -webkit-box-ordinal-group: -1;
+    -moz-box-ordinal-group: -1;
+    -ms-flex-order: -1;
+    -webkit-order: -1;
     order: -1;
   }
 }
@@ -1796,7 +1886,7 @@ section#process article .processee .implementation::before {
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .logos .flex {
     flex-direction: column;
   }
@@ -1805,6 +1895,16 @@ section#process article .processee .implementation::before {
   padding-top: 40px;
 }
 #identity .logos article .flex-logo {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   margin: 1em auto;
   width: 30%;
   -webkit-filter: grayscale(75%) brightness(99%);
@@ -1815,7 +1915,7 @@ section#process article .processee .implementation::before {
   transition: filter 1s;
   -webkit-transition: -webkit-filter .6s;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .logos article .flex-logo {
     width: 80%;
   }
@@ -1828,7 +1928,7 @@ section#process article .processee .implementation::before {
   -o-filter: grayscale(0%);
   filter: none;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .logos .mobile-hide {
     display: none;
   }
@@ -1843,7 +1943,7 @@ section#process article .processee .implementation::before {
   background-position: center center;
   background-size: cover;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery .heading {
     padding: 16vw 0;
   }
@@ -1876,12 +1976,22 @@ section#process article .processee .implementation::before {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery {
     flex-direction: column;
   }
 }
 #identity .discovery article .identity-discovery .flex-transparency {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   width: 50vw;
   text-align: center;
   background-size: cover;
@@ -1890,11 +2000,15 @@ section#process article .processee .implementation::before {
   box-sizing: border-box;
   background-origin: border-box;
   background-position: center;
-  transition: 0.2s ease;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   border: 25vw solid rgba(0, 0, 0, 0.7);
   position: relative;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .flex-transparency {
     height: 100vw;
     border: 50vw solid rgba(0, 0, 0, 0.7);
@@ -1907,11 +2021,11 @@ section#process article .processee .implementation::before {
 }
 #identity .discovery article .identity-discovery .flex-transparency:hover,
 #identity .discovery article .identity-discovery .flex-transparency:focus {
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -ms-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+  -ms-transition: 0.8s ease;
+  -o-transition: 0.8s ease;
+  transition: 0.8s ease;
   border: 0 solid transparent;
 }
 #identity .discovery article .identity-discovery .qc {
@@ -1929,10 +2043,11 @@ section#process article .processee .implementation::before {
   left: -4vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .qc::after {
     font-size: 12vw;
     left: -5vw;
@@ -1957,10 +2072,11 @@ section#process article .processee .implementation::before {
   left: -3vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .bb::after {
     font-size: 12vw;
     left: -8vw;
@@ -1985,10 +2101,11 @@ section#process article .processee .implementation::before {
   left: -4vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .dd::after {
     font-size: 12vw;
     left: -8vw;
@@ -2013,10 +2130,11 @@ section#process article .processee .implementation::before {
   left: -1vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .oc::after {
     font-size: 12vw;
     left: -2vw;
@@ -2041,10 +2159,11 @@ section#process article .processee .implementation::before {
   left: -5vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .m2m::after {
     font-size: 12vw;
     left: -9vw;
@@ -2069,10 +2188,11 @@ section#process article .processee .implementation::before {
   left: -1vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .dg::after {
     font-size: 12vw;
     left: -2vw;
@@ -2097,10 +2217,11 @@ section#process article .processee .implementation::before {
   left: -2vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .sb::after {
     font-size: 12vw;
     left: -3vw;
@@ -2125,10 +2246,11 @@ section#process article .processee .implementation::before {
   left: -5vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .hers::after {
     font-size: 12vw;
     left: -9vw;
@@ -2153,10 +2275,11 @@ section#process article .processee .implementation::before {
   left: -5vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .fgdp::after {
     font-size: 12vw;
     left: -9vw;
@@ -2181,10 +2304,11 @@ section#process article .processee .implementation::before {
   left: -5vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .srebla::after {
     font-size: 12vw;
     left: -9vw;
@@ -2209,10 +2333,11 @@ section#process article .processee .implementation::before {
   left: -5vw;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .soda::after {
     font-size: 12vw;
     left: -9vw;
@@ -2223,9 +2348,19 @@ section#process article .processee .implementation::before {
   font-size: 0;
 }
 #identity .discovery article .identity-discovery .flex-content {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   width: 35%;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .flex-content {
     width: 80%;
     margin: 2em auto;
@@ -2234,7 +2369,7 @@ section#process article .processee .implementation::before {
 #identity .discovery article .identity-discovery .flex-content h3 {
   font-size: 3vw;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #identity .discovery article .identity-discovery .flex-content h3 {
     font-size: 6vw;
     text-align: center;
@@ -2243,12 +2378,16 @@ section#process article .processee .implementation::before {
 #identity .discovery article .identity-discovery .flex-content p {
   font-size: 14px;
 }
-@media screen and (min-width: 521px) {
+@media (min-width: 521px) {
   #identity .discovery article .identity-discovery:nth-of-type(2n-1) .flex-content {
     margin-right: 5%;
   }
   #identity .discovery article .identity-discovery:nth-of-type(2n) .flex-content {
     margin-left: 5%;
+    -webkit-box-ordinal-group: -1;
+    -moz-box-ordinal-group: -1;
+    -ms-flex-order: -1;
+    -webkit-order: -1;
     order: -1;
   }
 }
@@ -2258,12 +2397,12 @@ section#process article .processee .implementation::before {
   text-align: center;
   margin: 1em auto 0;
 }
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   #art .studio article h2 {
     font-size: 10vw;
   }
 }
-#art .studio article .flex {
+#art .studio article .flex-box {
   padding: 0;
   display: -webkit-box;
   display: -moz-box;
@@ -2276,12 +2415,12 @@ section#process article .processee .implementation::before {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 520px) {
-  #art .studio article .flex {
+@media (max-width: 520px) {
+  #art .studio article .flex-box {
     flex-direction: column;
   }
 }
-#art .studio article .flex .flexy {
+#art .studio article .flex-box .inflex {
   margin: 40px auto;
   width: 28%;
   -webkit-filter: grayscale(70%) brightness(90%);
@@ -2289,16 +2428,16 @@ section#process article .processee .implementation::before {
   -ms-filter: grayscale(70%) brightness(90%);
   -o-filter: grayscale(70%) brightness(90%);
   filter: gray;
-  transition: filter 1s;
-  -webkit-transition: -webkit-filter .6s;
+  transition: filter 0.6s;
+  -webkit-transition: -webkit-filter 0.6s;
 }
-@media screen and (max-width: 520px) {
-  #art .studio article .flex .flexy {
+@media (max-width: 520px) {
+  #art .studio article .flex-box .inflex {
     width: 90%;
   }
 }
-#art .studio article .flex .flexy:hover,
-#art .studio article .flex .flexy:focus {
+#art .studio article .flex-box .inflex:hover,
+#art .studio article .flex-box .inflex:focus {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
   -ms-filter: grayscale(0%);
@@ -2367,12 +2506,22 @@ footer {
   flex-wrap: nowrap;
   flex-direction: row;
 }
-@media screen and (max-width: 850px) {
+@media (max-width: 849px) {
   footer {
     flex-direction: column;
   }
 }
 footer .socmed {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   padding-top: .5em;
   margin: auto;
 }
@@ -2394,8 +2543,8 @@ footer .socmed ul li a {
   -ms-filter: grayscale(100%) brightness(250%);
   -o-filter: grayscale(100%) brightness(250%);
   filter: gray;
-  transition: filter 1s;
-  -webkit-transition: -webkit-filter .6s;
+  transition: filter 0.6s;
+  -webkit-transition: -webkit-filter 0.6s;
 }
 footer .socmed ul li a[href*="dribbble"] {
   background-image: url('../images/soc-med/color/Dribbble.png?1329886232');
@@ -2416,8 +2565,8 @@ footer .socmed ul li a[href*="google"] {
   -ms-filter: grayscale(100%) brightness(350%);
   -o-filter: grayscale(100%) brightness(350%);
   filter: gray;
-  transition: filter 1s;
-  -webkit-transition: -webkit-filter .6s;
+  transition: filter 0.6s;
+  -webkit-transition: -webkit-filter 0.6s;
 }
 footer .socmed ul li a[href*="twitter"] {
   background-image: url('../images/soc-med/color/Twitter.png?1329886182');
@@ -2434,15 +2583,35 @@ footer .socmed ul li a:focus {
   filter: none;
 }
 footer .contact {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   margin: auto;
 }
 footer .copyright {
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
   color: #eee;
   margin: auto;
 }
-@media screen and (max-width: 850px) {
+@media (max-width: 520px) {
   footer .copyright {
-    margin: 2em auto 1em;
+    margin: 1em auto;
   }
 }
 footer .backtotop {
@@ -2464,8 +2633,8 @@ footer .backtotop::after {
   -ms-filter: grayscale(80%) brightness(100%);
   -o-filter: grayscale(80%) brightness(100%);
   filter: gray;
-  transition: filter 1s;
-  -webkit-transition: -webkit-filter .6s;
+  transition: filter 0.6s;
+  -webkit-transition: -webkit-filter 0.6s;
 }
 footer .backtotop:hover::after,
 footer .backtotop:focus::after {
