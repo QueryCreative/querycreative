@@ -1192,6 +1192,8 @@ section {
           padding: 0;
           @include flexbox();
           @include fullflex();
+          -webkit-justify-content: space-between;
+          justify-content: space-between;
           @include breakpoint(mobile){
             @include flex-direx(column);
           }
@@ -1440,6 +1442,8 @@ section {
         padding: 0;
         @include flexbox();
         @include fullflex();
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
         @include breakpoint(mobile){
           @include flex-direx(column);
         }

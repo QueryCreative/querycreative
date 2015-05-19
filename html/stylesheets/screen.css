@@ -1690,6 +1690,8 @@ section#process article .processee .implementation::before {
   justify-content: center;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 @media (max-width: 520px) {
   #interactive section.websites article .site {
@@ -2020,6 +2022,8 @@ section#process article .processee .implementation::before {
   justify-content: center;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 @media (max-width: 520px) {
   #identity .discovery article .identity-discovery {
