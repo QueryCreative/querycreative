@@ -391,13 +391,10 @@ nav#fixed {
   }
   .flex {
     @include flexbox();
-    flex-direction: row;
-    align-items: center;
-    align-content: space-between;
-    justify-content: center;
-    flex-wrap: wrap;
+    @include fullflex();
     @include breakpoint(mobile) {
-      flex-direction: column;
+      display: block;
+      margin: 0 auto;
     }
     #logo {
       @include flex(0 1 auto);
@@ -413,8 +410,8 @@ nav#fixed {
       @include breakpoint(mobile) {
         width: 160px;
         height: 32px;
-        margin: 0;
-        margin-top: 15px;
+        display: block;
+        margin: 15px auto 0;
       }    
     }
     .menu {
@@ -423,6 +420,9 @@ nav#fixed {
       color: #242424;
       margin: auto;
       @include breakpoint(mobile) {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
       }
       ul {
         padding: 0;
@@ -574,6 +574,7 @@ header {
   header {
     nav#main {
       .menu {
+        padding: 0;
         ul {
           li {
             display: block;
@@ -699,6 +700,9 @@ section[role=main] {
   article.flex {
     @include flexbox();
     @include fullflex();
+    @include breakpoint(mobile) {
+      display: block;
+    }
     .flex-image {
       @include flex(0 1 auto);
       @include order(0);
@@ -706,6 +710,12 @@ section[role=main] {
       min-width: 270px;
       max-width: 420px;
       margin: auto;
+      @include breakpoint(mobile) {
+        margin: 1em auto;
+        display: block;
+        width: 90%;
+        text-align: center;
+      }
     }
     .flex-content {
       @include flex(0 1 auto);
@@ -715,6 +725,8 @@ section[role=main] {
       margin: auto;
       @include breakpoint(mobile) {
         margin: 2em auto;
+        display: block;
+        width: 90%;
         h2, h3, h4 {
           text-align: center;
         }
@@ -803,6 +815,7 @@ section {
             float: none;
             h2, h3, h4 {
               text-align: center;
+              font-size: 30px;
             }
           }
         }
@@ -1869,6 +1882,7 @@ footer {
           width: 28px;
           height: 28px;
           background-size: cover;
+          background-repeat: no-repeat;
           @include desatfilter(grayscale(100%) brightness(250%));
           transition: filter 0.6s;
           -webkit-transition: -webkit-filter 0.6s;
