@@ -1,3 +1,4 @@
+/** mixins, vars, prefixes and animation keyframes **/
 /* flexy as fuck */
 @mixin flexbox() {
   display: -webkit-box;
@@ -6,7 +7,7 @@
   display: -webkit-flex;
   display: flex;
 }
- 
+
 @mixin flex($values) {
   -webkit-box-flex: $values;
   -moz-box-flex:  $values;
@@ -14,7 +15,7 @@
   -ms-flex:  $values;
   flex:  $values;
 }
- 
+
 @mixin order($val) {
   -webkit-box-ordinal-group: $val;  
   -moz-box-ordinal-group: $val;     
@@ -22,12 +23,76 @@
   -webkit-order: $val;  
   order: $val;
 }
+
  
-.flex-boxer {
+/* example classes - for use or reference */
+.flex-box {
   @include flexbox();
 }
  
-.flexed {
-  @include flex(1 200px);
+.inflex {
+  @include flex(0 1 auto);
   @include order(0);
+}
+
+
+@mixin desatfilter($vars) {
+  -webkit-filter: $vars;
+  -moz-filter:    $vars;
+  -ms-filter:     $vars;
+  -o-filter:      $vars;
+  filter: gray;
+}
+
+@mixin nofilter() {
+  -webkit-filter: grayscale(0%);
+  -moz-filter:    grayscale(0%);
+  -ms-filter:     grayscale(0%);
+  -o-filter:      grayscale(0%);
+  filter: none;
+}
+
+@mixin transition($input) {
+  -webkit-transition: $input;
+  -moz-transition: $input;
+  -ms-transition: $input;
+  -o-transition: $input;
+  transition: $input;
+}
+
+/* breakpoints, obviously */
+$breakpoints: (
+  'mobile':       ( max-width:  520px  ),
+  'notmobile':    ( min-width:  521px  ),
+  'notsmall':     ( min-width:  650px  ),
+  'ipad':         ( min-width:  740px  ),
+  'mid':          ( max-width:  849px  ),
+  'large':        ( min-width:  850px  ),
+  'huge':         ( min-width:  1150px ),
+  'grande':       ( min-width:  1240px )
+);
+ 
+@mixin breakpoint($name) {
+      @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
+}
+
+/*  animations */
+@-webkit-keyframes animatedBackground {
+  0% { background-position: left top; }
+  100% { background-position: -1024px top; }
+}
+@-moz-keyframes animatedBackground {
+  0% { background-position: left top; }
+  100% { background-position: -1024px top; }
+}
+@-o-keyframes animatedBackground {
+  0% { background-position: left top; }
+  100% { background-position: -1024px top; }
 }

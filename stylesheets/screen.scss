@@ -22,21 +22,6 @@
 @import "partials/layout";
 @import "partials/mixins";
 
-
-/*  animations */
-@-webkit-keyframes animatedBackground {
-  0% { background-position: left top; }
-  100% { background-position: -1024px top; }
-}
-@-moz-keyframes animatedBackground {
-  0% { background-position: left top; }
-  100% { background-position: -1024px top; }
-}
-@-o-keyframes animatedBackground {
-  0% { background-position: left top; }
-  100% { background-position: -1024px top; }
-}
-
 /* css reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -401,7 +386,7 @@ nav#fixed {
   color: #242424;
   z-index: 9999;
   display: none;
-  @media screen and (max-width: 520px){
+  @include breakpoint(mobile){
     height: 85px;
   }
   .flex {
@@ -411,20 +396,21 @@ nav#fixed {
     align-content: space-between;
     justify-content: center;
     flex-wrap: wrap;
-    @media screen and (max-width: 520px){
+    @include breakpoint(mobile) {
       flex-direction: column;
     }
     #logo {
+      @include flex(0 1 auto);
+      @include order(0);
       background-image: image-url('ui/logo.png');
       background-size: contain;
       background-repeat: no-repeat;
       font-size: 0;
-      display: inline-block;
       width: 180px;
       height: 36px;
       margin: auto;
       margin-top: 14px;
-      @media screen and (max-width: 520px){
+      @include breakpoint(mobile) {
         width: 160px;
         height: 32px;
         margin: 0;
@@ -432,14 +418,16 @@ nav#fixed {
       }    
     }
     .menu {
+      @include flex(0 1 auto);
+      @include order(0);
       color: #242424;
       margin: auto;
-      @media screen and (max-width: 520px){
+      @include breakpoint(mobile) {
       }
       ul {
         padding: 0;
         margin: 1em auto;
-        @media screen and (max-width: 520px){
+        @include breakpoint(mobile) {
           margin: 10px auto;
         }
         list-style: none;
@@ -447,7 +435,7 @@ nav#fixed {
           display: inline;
           a {
             font-size: 2vw;
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile) {
               font-size: 4vw;
             }
             color: #242424;
@@ -472,7 +460,7 @@ nav#fixed {
             background-size: cover;
             margin-right: .5em;
             top: 3px;
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile) {
               height: 3.5vw;
               width: 3.5vw;
               top: 1px;
@@ -518,8 +506,10 @@ header {
   // background-attachment: fixed;
   height: 50vh;
   nav#main {
+    @include flex(0 1 auto);
+    @include order(0);
+    margin: 0 auto;
     h1 { 
-      margin: 0;
       a {
         font-size: 10vw;
         line-height: 1;
@@ -530,6 +520,8 @@ header {
       }
     }
     .menu {
+      @include flex(0 1 auto);
+      @include order(0);
       color: #fff;
       background-color: rgba(40, 40, 40, 0.1);
       padding: 1em 2em;
@@ -578,7 +570,7 @@ header {
   }
 }
 
-@media screen and (max-width: 520px) {
+@include breakpoint(mobile) {
   header {
     nav#main {
       .menu {
@@ -615,7 +607,7 @@ section[role=main] {
   section {
     h2 {
       font-size: 7vw;
-      @media screen and (max-width: 520px){
+      @include breakpoint(mobile) {
         font-size: 5vw;
       }
     }
@@ -630,7 +622,7 @@ section[role=main] {
       }
       p {
         font-size: 2vw;
-        @media screen and (max-width: 520px){
+        @include breakpoint(mobile) {
           font-size: 3vw;        
         }
       }
@@ -712,16 +704,20 @@ section[role=main] {
     justify-content: center;
     flex-wrap: wrap;
     .flex-image {
+      @include flex(0 1 auto);
+      @include order(0);
       width: 33%;
       min-width: 270px;
       max-width: 420px;
       margin: auto;
     }
     .flex-content {
+      @include flex(0 1 auto);
+      @include order(0);
       width: 44%;
       min-width: 300px;
       margin: auto;
-      @media screen and (max-width: 520px) {
+      @include breakpoint(mobile) {
         margin: 2em auto;
         h2, h3, h4 {
           text-align: center;
@@ -751,7 +747,7 @@ section {
       display: block;
       color: #fff;
       padding: 20vw 0;
-      @media screen and (max-width: 520px){
+      @include breakpoint(mobile) {
         padding: 16vw 0;
       }
       text-align: center;
@@ -768,7 +764,7 @@ section {
         font-size: 2vw;
         margin: 0 auto;
         line-height: 1.2;
-        @media screen and (max-width: 520px){
+        @include breakpoint(mobile) {
           font-size: 3vw;        
         }
       }
@@ -794,7 +790,7 @@ section {
       }
       .processee {
         margin: 4em auto;
-        @media screen and (max-width: 520px) {
+        @include breakpoint(mobile) {
           margin: 1em auto;
         }
         .content {
@@ -806,7 +802,7 @@ section {
             margin: 0;
             font-size: 5vw;
           }
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             width: 100%;
             float: none;
             h2, h3, h4 {
@@ -824,7 +820,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 4em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             float: none;
             margin: 2em auto;
           }
@@ -839,7 +835,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 4em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             float: none;
             margin: 2em auto;
           }
@@ -854,7 +850,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 4em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             float: none;
             margin: 2em auto;
           }
@@ -888,7 +884,7 @@ section {
             line-height: 1;
             margin: 0;
           }
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             h2, h3, h4 {
               text-align: center;
@@ -909,7 +905,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -924,7 +920,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -939,7 +935,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -954,7 +950,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -969,7 +965,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -984,7 +980,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -999,7 +995,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -1014,7 +1010,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -1029,7 +1025,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -1044,7 +1040,7 @@ section {
           float: left;
           margin-right: 3em;
           margin-bottom: 6em;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             margin: 2em auto;
             float: none;
           }
@@ -1074,7 +1070,7 @@ section {
           margin: 0 auto;
           position: relative;
           z-index: 0;
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             background-image: none;
             width: 80px;
             height: 80px;
@@ -1085,12 +1081,12 @@ section {
           display: block;
           width: 80px;
           height: 80px;
-          @media screen and (min-width: 521px) {
+          @include breakpoint(notmobile) {
             top: 30px;
             left: 78px;
             background-image: image-url('external-logos/firespring-symbol-light.png');
           }
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             background-image: image-url('external-logos/firespring-symbol-dark.png');
           }
           background-size: contain;
@@ -1110,16 +1106,16 @@ section {
           position: absolute;
           z-index: 1;
           top: 35px;
-          @media screen and (min-width: 521px) {
+          @include breakpoint(notmobile) {
               right: 26%;
           }
-          @media screen and (min-width: 740px) {
+          @include breakpoint(ipad) {
               right: 33%;
           }
-          @media screen and (min-width: 1240px) {
+          @include breakpoint(grande) {
               right: 38%;
           }
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             background-image: none;
             display: none;
           }
@@ -1129,12 +1125,12 @@ section {
           display: block;
           width: 69px;
           height: 69px;
-          @media screen and (min-width: 521px) {
+          @include breakpoint(notmobile) {
             top: 64px;
             left: 9px;
             background-image: image-url('external-logos/qc-symbol.png');
           }
-          @media screen and (max-width: 520px) {
+          @include breakpoint(mobile) {
             background-image: none;
             display: none;
           }
@@ -1147,7 +1143,7 @@ section {
         .content {
           text-align: center;
           padding: 0 15%;
-          @media screen and (max-width: 520px){
+          @include breakpoint(mobile){
             padding: 0 5%;
           }
           h3 {
@@ -1157,7 +1153,7 @@ section {
           }
           p {
             font-size: 2vw;
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile){
               font-size: 3vw;        
             }
           }
@@ -1191,10 +1187,12 @@ section {
           align-content: center;
           justify-content: space-between;
           flex-wrap: wrap;
-          @media screen and (max-width: 520px){
+          @include breakpoint(mobile){
             flex-direction: column;
           }
           .flex-transparency {
+            @include flex(0 1 auto);
+            @include order(0);
             width: 50vw;
             text-align: center;
             background-size: cover;
@@ -1202,9 +1200,9 @@ section {
             box-sizing: border-box;
             background-origin: border-box;
             background-position: center top;
-            transition: 0.2s ease;
+            @include transition(0.4s ease-in);
             border: 25vw solid rgba(0,0,0,0.7);
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile){
               height: 100vw;
               border: 50vw solid rgba(0,0,0,0.7);
               width: 100vw;
@@ -1214,29 +1212,10 @@ section {
               color: #fff;
             }
             position: relative;
-            // -webkit-filter: grayscale(90%) brightness(66%);
-            // -moz-filter:    grayscale(90%) brightness(66%);
-            // -ms-filter:     grayscale(90%) brightness(66%);
-            // -o-filter:      grayscale(90%) brightness(66%);
-            // filter: gray;
-            // transition: filter 1s;
-            // -webkit-transition: -webkit-filter .6s;
           }
-          // .flex-transparency:hover,
-          // .flex-transparency:focus {
-          //   -webkit-filter: grayscale(0%);
-          //   -moz-filter:    grayscale(0%);
-          //   -ms-filter:     grayscale(0%);
-          //   -o-filter:      grayscale(0%);
-          //   filter: none;
-          // }
           .flex-transparency:hover,
           .flex-transparency:focus {
-            -webkit-transition-duration: 0.5s;
-            -moz-transition-duration: 0.5s;
-            -ms-transition-duration: 0.5s;
-            -o-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+            @include transition(0.8s ease);
             border: 0 solid rgba(0,0,0,0);
           }
           .m2m {
@@ -1256,7 +1235,7 @@ section {
             -moz-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             -ms-transition: all 0.3s ease;
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile) {
               font-size: 12vw;
               left: -6vw;
             }
@@ -1282,7 +1261,7 @@ section {
             -moz-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             -ms-transition: all 0.3s ease;
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile){
               font-size: 12vw;
               left: -4vw;
             }
@@ -1308,7 +1287,7 @@ section {
             -moz-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             -ms-transition: all 0.3s ease;
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile) {
               font-size: 12vw;
               left: -5vw;
             }
@@ -1334,7 +1313,7 @@ section {
             -moz-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             -ms-transition: all 0.3s ease;
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile) {
               font-size: 12vw;
               left: -4vw;
             }
@@ -1344,14 +1323,16 @@ section {
             font-size: 0;
           }
           .flex-content {
+            @include flex(0 1 auto);
+            @include order(0);
             width: 35%;
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile) {
               width: 80%;
               margin: 2em auto;
             }
             h3 {
               font-size: 3vw;
-              @media screen and (max-width: 520px){
+              @include breakpoint(mobile) {
                 font-size: 6vw;
                 text-align: center;
               }
@@ -1372,13 +1353,13 @@ section {
             }
           }
         }
-        @media screen and (min-width: 521px) {
+        @include breakpoint(notmobile) {
           .site:nth-of-type(2n-1) .flex-content {
             margin-right: 5%;
           }
           .site:nth-of-type(2n) .flex-content {
             margin-left: 5%;
-            order: -1;
+            @include order(-1);
           }
         }
       }
@@ -1392,7 +1373,7 @@ section {
       @include flexbox();
       flex-wrap: wrap;
       flex-direction: row;
-      @media screen and (max-width: 520px){
+      @include breakpoint(mobile){
         flex-direction: column;
       }
       justify-content: space-around;
@@ -1401,31 +1382,25 @@ section {
     article {
       padding-top: 40px;
       .flex-logo {
+        @include flex(0 1 auto);
+        @include order(0);
         margin: 1em auto;
         width: 30%;
-        -webkit-filter: grayscale(75%) brightness(99%);
-        -moz-filter:    grayscale(75%) brightness(99%);
-        -ms-filter:     grayscale(75%) brightness(99%);
-        -o-filter:      grayscale(75%) brightness(99%);
-        filter: gray;
+        @include desatfilter(grayscale(75%) brightness(99%));
         transition: filter 1s;
         -webkit-transition: -webkit-filter .6s;
-        @media screen and (max-width: 520px){
+        @include breakpoint(mobile){
           width: 80%;
         }
         img {}
       }
       .flex-logo:hover,
       .flex-logo:focus {
-        -webkit-filter: grayscale(0%);
-        -moz-filter:    grayscale(0%);
-        -ms-filter:     grayscale(0%);
-        -o-filter:      grayscale(0%);
-        filter: none;
+        @include nofilter();
       }
     }
     .mobile-hide {
-      @media screen and (max-width: 520px){
+      @include breakpoint(mobile){
         display: none;
       }
     }
@@ -1435,7 +1410,7 @@ section {
       display: block;
       color: #fff;
       padding: 20vw 0;
-      @media screen and (max-width: 520px){
+      @include breakpoint(mobile){
         padding: 16vw 0;
       }
       text-align: center;
@@ -1467,10 +1442,12 @@ section {
         align-content: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        @media screen and (max-width: 520px){
+        @include breakpoint(mobile){
           flex-direction: column;
         }
         .flex-transparency {
+          @include flex(0 1 auto);
+          @include order(0);
           width: 50vw;
           text-align: center;
           background-size: cover;
@@ -1479,9 +1456,9 @@ section {
           box-sizing: border-box;
           background-origin: border-box;
           background-position: center;
-          transition: 0.2s ease;
+          @include transition(0.4s);
           border: 25vw solid rgba(0,0,0,0.7);
-          @media screen and (max-width: 520px){
+          @include breakpoint(mobile){
             height: 100vw;
             border: 50vw solid rgba(0,0,0,0.7);
             width: 100vw;
@@ -1491,26 +1468,10 @@ section {
             color: #fff;
           }
           position: relative;
-          // -webkit-filter: grayscale(90%) brightness(66%);
-          // -moz-filter:    grayscale(90%) brightness(66%);
-          // -ms-filter:     grayscale(90%) brightness(66%);
-          // -o-filter:      grayscale(90%) brightness(66%);
-          // filter: gray;
-          // transition: filter 1s;
-          // -webkit-transition: -webkit-filter .6s;
         }
         .flex-transparency:hover,
         .flex-transparency:focus {
-          // -webkit-filter: grayscale(0%);
-          // -moz-filter:    grayscale(0%);
-          // -ms-filter:     grayscale(0%);
-          // -o-filter:      grayscale(0%);
-          // filter: none;
-          -webkit-transition-duration: 0.5s;
-          -moz-transition-duration: 0.5s;
-          -ms-transition-duration: 0.5s;
-          -o-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+          @include transition(0.8s ease);
           border: 0 solid rgba(0,0,0,0);
         }
         .qc {
@@ -1526,11 +1487,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -4vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -5vw;
           }
@@ -1552,11 +1510,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -3vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -8vw;
           }
@@ -1578,11 +1533,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -4vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -8vw;
           }
@@ -1604,11 +1556,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -1vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -2vw;
           }
@@ -1630,11 +1579,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -5vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -9vw;
           }
@@ -1656,11 +1602,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -1vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -2vw;
           }
@@ -1682,11 +1625,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -2vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -3vw;
           }
@@ -1709,11 +1649,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -5vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -9vw;
           }
@@ -1735,11 +1672,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -5vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -9vw;
           }
@@ -1761,11 +1695,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -5vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -9vw;
           }
@@ -1787,11 +1718,8 @@ section {
           position: absolute;
           top: -5vw;
           left: -5vw;
-          -webkit-transition: all 0.3s ease;
-          -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease;
-          -ms-transition: all 0.3s ease;
-          @media screen and (max-width: 520px){
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
             font-size: 12vw;
             left: -9vw;
           }
@@ -1803,14 +1731,16 @@ section {
 
 
         .flex-content {
+          @include flex(0 1 auto);
+          @include order(0);
           width: 35%;
-          @media screen and (max-width: 520px){
+          @include breakpoint(mobile){
             width: 80%;
             margin: 2em auto;
           }
           h3 {
             font-size: 3vw;
-            @media screen and (max-width: 520px){
+            @include breakpoint(mobile){
               font-size: 6vw;
               text-align: center;
             }
@@ -1820,13 +1750,13 @@ section {
           }
         }
       }
-      @media screen and (min-width: 521px) {
+      @include breakpoint(notmobile) {
         .identity-discovery:nth-of-type(2n-1) .flex-content {
           margin-right: 5%;
         }
         .identity-discovery:nth-of-type(2n) .flex-content {
           margin-left: 5%;
-          order: -1;
+          @include order(-1);
         }
       }
     }
@@ -1840,11 +1770,11 @@ section {
         font-size: 7vw;
         text-align: center;
         margin: 1em auto 0;
-        @media screen and (max-width: 520px){
+        @include breakpoint(mobile){
           font-size: 10vw;
         }
       }
-      .flex {
+      .flex-box {
         padding: 0;
         @include flexbox();
         flex-direction: row;
@@ -1852,30 +1782,22 @@ section {
         align-content: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        @media screen and (max-width: 520px){
+        @include breakpoint(mobile){
           flex-direction: column;
         }
-        .flexy {
+        .inflex {
           margin: 40px auto;
           width: 28%;
-          -webkit-filter: grayscale(70%) brightness(90%);
-          -moz-filter:    grayscale(70%) brightness(90%);
-          -ms-filter:     grayscale(70%) brightness(90%);
-          -o-filter:      grayscale(70%) brightness(90%);
-          filter: gray;
-          transition: filter 1s;
-          -webkit-transition: -webkit-filter .6s;
-          @media screen and (max-width: 520px){
+          @include desatfilter(grayscale(70%) brightness(90%));
+          transition: filter 0.6s;
+          -webkit-transition: -webkit-filter 0.6s;
+          @include breakpoint(mobile){
             width: 90%
           }
         }
-        .flexy:hover,
-        .flexy:focus {
-          -webkit-filter: grayscale(0%);
-          -moz-filter:    grayscale(0%);
-          -ms-filter:     grayscale(0%);
-          -o-filter:      grayscale(0%);
-          filter: none;
+        .inflex:hover,
+        .inflex:focus {
+          @include nofilter();
         }
       }
     }
@@ -1944,10 +1866,12 @@ footer {
   justify-content: space-around;
   flex-wrap: nowrap;
   flex-direction: row;
-  @media screen and (max-width: 850px) {
+  @include breakpoint(mid) {
     flex-direction: column;
   }
   .socmed {
+    @include flex(0 1 auto);
+    @include order(0);
     padding-top: .5em;
     margin: auto;
     ul {
@@ -1961,13 +1885,9 @@ footer {
           width: 28px;
           height: 28px;
           background-size: cover;
-          -webkit-filter: grayscale(100%) brightness(250%);
-          -moz-filter:    grayscale(100%) brightness(250%);
-          -ms-filter:     grayscale(100%) brightness(250%);
-          -o-filter:      grayscale(100%) brightness(250%);
-          filter: gray;
-          transition: filter 1s;
-          -webkit-transition: -webkit-filter .6s;
+          @include desatfilter(grayscale(100%) brightness(250%));
+          transition: filter 0.6s;
+          -webkit-transition: -webkit-filter 0.6s;
         }
         a[href*="dribbble"] {
           background-image:image-url('soc-med/color/Dribbble.png');  
@@ -1983,13 +1903,9 @@ footer {
         }
         a[href*="google"] {
           background-image:image-url('soc-med/color/Google.png');
-          -webkit-filter: grayscale(100%) brightness(350%);
-          -moz-filter:    grayscale(100%) brightness(350%);
-          -ms-filter:     grayscale(100%) brightness(350%);
-          -o-filter:      grayscale(100%) brightness(350%);
-          filter: gray;
-          transition: filter 1s;
-          -webkit-transition: -webkit-filter .6s;
+          @include desatfilter(grayscale(100%) brightness(350%));
+          transition: filter 0.6s;
+          -webkit-transition: -webkit-filter 0.6s;
         }
         a[href*="twitter"] {
           background-image:image-url('soc-med/color/Twitter.png');
@@ -1999,23 +1915,23 @@ footer {
         }
         a:hover,
         a:focus {
-          -webkit-filter: grayscale(0%);
-          -moz-filter:    grayscale(0%);
-          -ms-filter:     grayscale(0%);
-          -o-filter:      grayscale(0%);
-          filter: none;  
+          @include nofilter(); 
         }
       }
     }
   }
   .contact {
+    @include flex(0 1 auto);
+    @include order(0);
     margin: auto;
   }
   .copyright {
+    @include flex(0 1 auto);
+    @include order(0);
     color: #eee;
     margin: auto;
-    @media screen and (max-width: 850px) {
-      margin: 2em auto 1em;
+    @include breakpoint(mobile) {
+      margin: 1em auto;
     }
   }
   .backtotop {
@@ -2032,21 +1948,13 @@ footer {
     background-image: image-url('ui/backtotop-icon.png');
     background-repeat: no-repeat;
     background-size: contain;
-    -webkit-filter: grayscale(80%) brightness(100%);
-    -moz-filter:    grayscale(80%) brightness(100%);
-    -ms-filter:     grayscale(80%) brightness(100%);
-    -o-filter:      grayscale(80%) brightness(100%);
-    filter: gray;
-    transition: filter 1s;
-    -webkit-transition: -webkit-filter .6s;
+    @include desatfilter(grayscale(80%) brightness(100%));
+    transition: filter 0.6s;
+    -webkit-transition: -webkit-filter 0.6s;
   }
   .backtotop:hover::after,
   .backtotop:focus::after {
-    -webkit-filter: grayscale(0%);
-    -moz-filter:    grayscale(0%);
-    -ms-filter:     grayscale(0%);
-    -o-filter:      grayscale(0%);
-    filter: none;  
+    @include nofilter();
   }
 }
 
