@@ -487,7 +487,7 @@ header {
     background-image: image-url('bkgds/bkgd-widelense.jpg');
   }
   &#Interactive {
-    background-image: image-url('bkgds/bkgd-macdesk.jpg');
+    background-image: image-url('bkgds/bkgd-macdesk-inner.jpg');
   }
   &#Identity {
     background-image: image-url('bkgds/bkgd-desk.jpg');
@@ -648,11 +648,11 @@ section[role=main] {
       h2 {
         display: block;
         color: #fff;
-        padding: 20vw 0;
+        padding: 15vw 0;
         font-size: 10vw;
         text-align: center;
         width: 100%;
-        background-image: image-url('bkgds/bkgd-macdesk.jpg');
+        background-image: image-url('bkgds/bkgd-desky.jpg');
         background-position: center center;
         background-size: cover;
       }
@@ -664,14 +664,14 @@ section[role=main] {
         display: block;
         position: absolute;
         top: 50px;
-        left: 105px;
+        left: 106px;
         width: 69px;
         height: 69px;
         background-image: image-url('external-logos/firespring-symbol-light.png');
         background-size: contain;
       }
       .imac {
-        width: 400px;
+        width: 280px !important;
       }
     }
     &.upcoming {
@@ -698,11 +698,7 @@ section[role=main] {
 #index {
   article.flex {
     @include flexbox();
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    @include fullflex();
     .flex-image {
       @include flex(0 1 auto);
       @include order(0);
@@ -1182,13 +1178,9 @@ section {
         .site {
           padding: 0;
           @include flexbox();
-          flex-direction: row;
-          align-items: center;
-          align-content: center;
-          justify-content: space-between;
-          flex-wrap: wrap;
+          @include fullflex();
           @include breakpoint(mobile){
-            flex-direction: column;
+            @include flex-direx(column);
           }
           .flex-transparency {
             @include flex(0 1 auto);
@@ -1371,13 +1363,10 @@ section {
   .logos {
     .flex {
       @include flexbox();
-      flex-wrap: wrap;
-      flex-direction: row;
+      @include fullflex();
       @include breakpoint(mobile){
-        flex-direction: column;
+        @include flex-direx(column);
       }
-      justify-content: space-around;
-      align-items: center;
     }
     article {
       padding-top: 40px;
@@ -1437,13 +1426,9 @@ section {
       .identity-discovery {
         padding: 0;
         @include flexbox();
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        @include fullflex();
         @include breakpoint(mobile){
-          flex-direction: column;
+          @include flex-direx(column);
         }
         .flex-transparency {
           @include flex(0 1 auto);
@@ -1777,13 +1762,9 @@ section {
       .flex-box {
         padding: 0;
         @include flexbox();
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        @include fullflex();
         @include breakpoint(mobile){
-          flex-direction: column;
+          @include flex-direx(column);
         }
         .inflex {
           margin: 40px auto;
@@ -1864,10 +1845,13 @@ footer {
   position: relative;
   @include flexbox();
   justify-content: space-around;
+  -webkit-justify-content: space-around;
   flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
   flex-direction: row;
+  -webkit-flex-direction: row;
   @include breakpoint(mid) {
-    flex-direction: column;
+    @include flex-direx(column);
   }
   .socmed {
     @include flex(0 1 auto);

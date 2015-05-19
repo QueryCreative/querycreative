@@ -24,6 +24,21 @@
   order: $val;
 }
 
+@mixin fullflex(){
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+        align-content: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@mixin flex-direx($whichway){
+  -webkit-flex-direction: $whichway;
+  flex-direction: $whichway;
+}
  
 /* example classes - for use or reference */
 .flex-box {

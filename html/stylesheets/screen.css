@@ -886,7 +886,7 @@ header#Services {
   background-image: url('../images/bkgds/bkgd-widelense.jpg?1431128013');
 }
 header#Interactive {
-  background-image: url('../images/bkgds/bkgd-macdesk.jpg?1430852646');
+  background-image: url('../images/bkgds/bkgd-macdesk-inner.jpg?1432063707');
 }
 header#Identity {
   background-image: url('../images/bkgds/bkgd-desk.jpg?1431127966');
@@ -1038,11 +1038,11 @@ section[role=main] article {
 #index section.work h2 {
   display: block;
   color: #fff;
-  padding: 20vw 0;
+  padding: 15vw 0;
   font-size: 10vw;
   text-align: center;
   width: 100%;
-  background-image: url('../images/bkgds/bkgd-macdesk.jpg?1430852646');
+  background-image: url('../images/bkgds/bkgd-desky.jpg?1432063754');
   background-position: center center;
   background-size: cover;
 }
@@ -1054,14 +1054,14 @@ section[role=main] article {
   display: block;
   position: absolute;
   top: 50px;
-  left: 105px;
+  left: 106px;
   width: 69px;
   height: 69px;
   background-image: url('../images/external-logos/firespring-symbol-light.png?1431823426');
   background-size: contain;
 }
 #index section.work .imac {
-  width: 400px;
+  width: 280px !important;
 }
 #index section.upcoming {
   background-image: url('../images/bkgds/bkgd-noise.gif?1418751346');
@@ -1088,10 +1088,13 @@ section[role=main] article {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
-  align-items: center;
+  -webkit-align-items: center;
   align-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 #index article.flex .flex-image {
@@ -1649,14 +1652,18 @@ section#process article .processee .implementation::before {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
-  align-items: center;
+  -webkit-align-items: center;
   align-content: center;
-  justify-content: space-between;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 @media (max-width: 520px) {
   #interactive section.websites article .site {
+    -webkit-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -1881,13 +1888,18 @@ section#process article .processee .implementation::before {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-direction: row;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-align-items: center;
+  align-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 @media (max-width: 520px) {
   #identity .logos .flex {
+    -webkit-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -1970,14 +1982,18 @@ section#process article .processee .implementation::before {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
-  align-items: center;
+  -webkit-align-items: center;
   align-content: center;
-  justify-content: space-between;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 @media (max-width: 520px) {
   #identity .discovery article .identity-discovery {
+    -webkit-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -2409,14 +2425,18 @@ section#process article .processee .implementation::before {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
-  align-items: center;
+  -webkit-align-items: center;
   align-content: center;
-  justify-content: space-between;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 @media (max-width: 520px) {
   #art .studio article .flex-box {
+    -webkit-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -2503,11 +2523,15 @@ footer {
   display: -webkit-flex;
   display: flex;
   justify-content: space-around;
+  -webkit-justify-content: space-around;
   flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
   flex-direction: row;
+  -webkit-flex-direction: row;
 }
 @media (max-width: 849px) {
   footer {
+    -webkit-flex-direction: column;
     flex-direction: column;
   }
 }
