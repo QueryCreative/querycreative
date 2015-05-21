@@ -373,7 +373,14 @@ a.button {
 }
 
 /*** layout ***/
-html {}
+html {
+  @include breakpoint(notmobile){
+        &::-webkit-scrollbar { 
+        display: none; 
+    }
+  }
+}
+
 body { margin: 0; }
 
 /*** nav and header ***/
@@ -639,6 +646,9 @@ section[role=main] {
         background-image: image-url('bkgds/bkgd-codecrop.jpg');
         background-position: center center;
         background-attachment: fixed; 
+        @include breakpoint(mid) {
+          background-attachment: scroll;        
+        }
         background-size: cover;
         background-repeat: repeat-x;
         animation: animatedBackground 50s linear infinite;
@@ -820,7 +830,7 @@ section {
           }
         }
         .ideation::before {
-          background-image: image-url('ui/ideation-compass.png');
+          background-image: image-url('ui/ideation-compass-gif.gif');
           content: '';
           display: block;
           width: 120px;
@@ -835,11 +845,11 @@ section {
           }
         }
         .inspiration::before {
-          background-image: image-url('ui/inspiration-rocket.png');
+          background-image: image-url('ui/inspiration-rocket-gif.gif');
           content: '';
           display: block;
           width: 120px;
-          height: 130px;
+          height: 124px;
           background-size: cover;
           float: left;
           margin-right: 3em;
@@ -850,7 +860,7 @@ section {
           }
         }
         .implementation::before {
-          background-image: image-url('ui/implementation-atom.png');
+          background-image: image-url('ui/implementation-atom-gif.gif');
           content: '';
           display: block;
           width: 120px;
@@ -1211,7 +1221,7 @@ section {
             border: 25vw solid rgba(0,0,0,0.7);
             @include breakpoint(mobile){
               height: 100vw;
-              border: 50vw solid rgba(0,0,0,0.7);
+              border: 50vw solid rgba(0,0,0,0.25);
               width: 100vw;
             }
             h2 {
@@ -1462,7 +1472,7 @@ section {
           border: 25vw solid rgba(0,0,0,0.7);
           @include breakpoint(mobile){
             height: 100vw;
-            border: 50vw solid rgba(0,0,0,0.7);
+            border: 50vw solid rgba(0,0,0,0.25);
             width: 100vw;
           }
           h2 {
@@ -1932,8 +1942,8 @@ footer {
     @include order(0);
     color: #eee;
     margin: auto;
-    @include breakpoint(mobile) {
-      margin: 1em auto;
+    @include breakpoint(mid) {
+      margin: 2em auto;
     }
   }
   .backtotop {

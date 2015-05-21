@@ -728,6 +728,12 @@ a.button.contact-icon::before {
 }
 
 /*** layout ***/
+@media (min-width: 521px) {
+  html::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -1049,6 +1055,11 @@ section[role=main] article {
   animation: animatedBackground 50s linear infinite;
   -webkit-animation: animatedBackground 50s linear infinite;
 }
+@media (max-width: 849px) {
+  #index section.whatdo h2 {
+    background-attachment: scroll;
+  }
+}
 #index section.work h2 {
   display: block;
   color: #fff;
@@ -1261,7 +1272,7 @@ section#process article .processee .content h2, section#process article .process
   }
 }
 section#process article .processee .ideation::before {
-  background-image: url('../images/ui/ideation-compass.png?1430855743');
+  background-image: url('../images/ui/ideation-compass-gif.gif?1432223241');
   content: '';
   display: block;
   width: 120px;
@@ -1278,11 +1289,11 @@ section#process article .processee .ideation::before {
   }
 }
 section#process article .processee .inspiration::before {
-  background-image: url('../images/ui/inspiration-rocket.png?1430855743');
+  background-image: url('../images/ui/inspiration-rocket-gif.gif?1432232792');
   content: '';
   display: block;
   width: 120px;
-  height: 130px;
+  height: 124px;
   background-size: cover;
   float: left;
   margin-right: 3em;
@@ -1295,7 +1306,7 @@ section#process article .processee .inspiration::before {
   }
 }
 section#process article .processee .implementation::before {
-  background-image: url('../images/ui/implementation-atom.png?1430855743');
+  background-image: url('../images/ui/implementation-atom-gif.gif?1432237067');
   content: '';
   display: block;
   width: 120px;
@@ -1729,7 +1740,7 @@ section#process article .processee .implementation::before {
 @media (max-width: 520px) {
   #interactive section.websites article .site .flex-transparency {
     height: 100vw;
-    border: 50vw solid rgba(0, 0, 0, 0.7);
+    border: 50vw solid rgba(0, 0, 0, 0.25);
     width: 100vw;
   }
 }
@@ -2061,7 +2072,7 @@ section#process article .processee .implementation::before {
 @media (max-width: 520px) {
   #identity .discovery article .identity-discovery .flex-transparency {
     height: 100vw;
-    border: 50vw solid rgba(0, 0, 0, 0.7);
+    border: 50vw solid rgba(0, 0, 0, 0.25);
     width: 100vw;
   }
 }
@@ -2668,9 +2679,9 @@ footer .copyright {
   color: #eee;
   margin: auto;
 }
-@media (max-width: 520px) {
+@media (max-width: 849px) {
   footer .copyright {
-    margin: 1em auto;
+    margin: 2em auto;
   }
 }
 footer .backtotop {
