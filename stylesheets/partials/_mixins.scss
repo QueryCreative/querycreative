@@ -7,7 +7,6 @@
   display: -webkit-flex;
   display: flex;
 }
-
 @mixin flex($values) {
   -webkit-box-flex: $values;
   -moz-box-flex:  $values;
@@ -15,15 +14,13 @@
   -ms-flex:  $values;
   flex:  $values;
 }
-
 @mixin order($val) {
-  -webkit-box-ordinal-group: $val;  
-  -moz-box-ordinal-group: $val;     
-  -ms-flex-order: $val;     
-  -webkit-order: $val;  
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
   order: $val;
 }
-
 @mixin fullflex(){
   -webkit-flex-direction: row;
           flex-direction: row;
@@ -34,23 +31,18 @@
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
 }
-
 @mixin flex-direx($whichway){
   -webkit-flex-direction: $whichway;
   flex-direction: $whichway;
 }
- 
 /* example classes - for use or reference */
 .flex-box {
   @include flexbox();
 }
- 
 .inflex {
   @include flex(0 1 auto);
   @include order(0);
 }
-
-
 @mixin desatfilter($vars) {
   -webkit-filter: $vars;
   -moz-filter:    $vars;
@@ -58,7 +50,6 @@
   -o-filter:      $vars;
   filter: gray;
 }
-
 @mixin nofilter() {
   -webkit-filter: grayscale(0%);
   -moz-filter:    grayscale(0%);
@@ -66,7 +57,6 @@
   -o-filter:      grayscale(0%);
   filter: none;
 }
-
 @mixin transition($input) {
   -webkit-transition: $input;
   -moz-transition: $input;
@@ -74,7 +64,6 @@
   -o-transition: $input;
   transition: $input;
 }
-
 /* breakpoints, obviously */
 $breakpoints: (
   'mobile':       ( max-width:  520px  ),
@@ -86,7 +75,6 @@ $breakpoints: (
   'huge':         ( min-width:  1150px ),
   'grande':       ( min-width:  1240px )
 );
- 
 @mixin breakpoint($name) {
       @if map-has-key($breakpoints, $name) {
         @media #{inspect(map-get($breakpoints, $name))} {
@@ -97,7 +85,6 @@ $breakpoints: (
     @warn "Couldn't find a breakpoint named `#{$name}`.";
   }
 }
-
 /*  animations */
 @-webkit-keyframes animatedBackground {
   0% { background-position: left top; }

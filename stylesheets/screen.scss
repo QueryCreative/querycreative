@@ -4,7 +4,8 @@
 @charset "UTF-8";
 
 /* fonts */
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,400);
+// @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,400);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
 @font-face {
     font-family: 'Bebas';
     src: url('../fonts/Bebas/Bebas-webfont.eot');
@@ -14,205 +15,16 @@
          url('../fonts/Bebas/Bebas-webfont.svg#BebasRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+
+$Bebas: 'Bebas', Helvetica, sans-serif;
+$Raleway: 'Raleway', Arial, sans-serif;
 
 @import "partials/base";
 @import "partials/content";
 @import "partials/layout";
 @import "partials/mixins";
-
-/* css reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-html, body {
-  line-height: 1;
-  background-color: white;
-  color: #222;
-}
-ol, ul {
-  list-style: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-a img {
-  border: none;
-}
-article, aside, details, figcaption, figure, footer, 
-header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-body {
-  color: #333333;
-  font-family: "Roboto Slab", Georgia, Times, serif;
-  font-size: 100%;
-  line-height: 1.2;
-}
-a {
-  .more {
-    white-space: nowrap;
-    &::after {
-      content: " »";
-    }
-  }
-}
-strong, b {
-  color: black;
-  font-weight: bold;
-}
-em, i, .italic {
-  font-style: italic;
-}
-abbr, acronym {
-  border-bottom: 1px dotted #999999;
-}
-sub, sup {
-  font-size: 85%;
-}
-sub {
-  vertical-align: sub;
-}
-sup {
-  vertical-align: super;
-}
-span {
-  .caps {
-    font-size: 95%;
-  }
-}
-h1 {
-  font-weight: normal;
-  line-height: 1.2;
-  margin: 0.75em 0;
-}
-h2 {
-  font-weight: normal;
-  line-height: 1.2;
-  margin: .5em 0;
-}
-h3 {
-  font-weight: normal;
-  line-height: 1.1;
-  margin: .5em 0;
-}
-h4 {
-  font-weight: normal;
-  margin: 0.5em 0;
-}
-h5 {
-  font-style: italic;
-  line-height: 1.1;
-  margin: 0.5em 0;
-}
-h6 {
-  font-style: italic;
-  line-height: 1.1;
-  margin: 0.5em 0;
-}
-p {
-  margin: 1em 0;
-  font-size: 16px;
-  line-height: 1.4;
-}
-ul, ol, dl {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 14px;
-}
-ul, ol, dd {
-  padding-left: 1.3em;
-}
-ul {
-  list-style: disc;
-}
-ul.nodots {
-  list-style: none;
-  padding-left: 0; /** or 1em; */
-}
-ol {
-  list-style: decimal;
-}
-li {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-dt {
-  margin-top: 1em;
-}
-dd {
-  margin-bottom: 1em;
-}
-code, dfn, kbd, samp, tt, .code {
-  font-family: Courier, Monaco, "Andale Mono", "Lucida Console", monospace;
-  font-size: 95%;
-  color: #585858;
-}
-pre {
-  background: #585858;
-  color: #ccc;
-  font-family: Courier, Monaco, "Andale Mono", "Lucida Console", monospace;
-  font-size: 95%;
-  line-height: 1.4;
-  margin: 1.5em 0;
-  padding: 1em;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-}
-img { 
-  width: 100%;
-}
-
-blockquote:before,
-.quote:before,
-q:before {
-  content: "\275D";
-  font-size: 90%;
-  padding-right: 0.2em;
-  position: relative;
-  top: -2px;
-}
-blockquote:after,
-.quote:after,
-q:after {
-  content: "\275E";
-  font-size: 90%;
-  padding-left: 0.2em;
-  position: relative;
-  top: -2px;
-}
+@import "partials/reset";
 
 /**** quick styles ****/
 .hidden {
@@ -245,11 +57,10 @@ q:after {
 .underlined {
   text-decoration: underline;
 }
-
 .black {
   color: #222 !important;
 }
-.white { 
+.white {
   color: white !important;
 }
 .gray {
@@ -272,19 +83,18 @@ q:after {
   padding-left: 0;
 }
 .sans {
-    font-family: 'Bebas', Helvetica, sans-serif;
+    font-family: $Bebas;
 }
-
-.serif {
-    font-family: 'Roboto Slab', Georgia, Times, serif;
-}
+// .serif {
+//     font-family: 'Roboto Slab', Georgia, Times, serif;
+// }
 
 /*** type ***/
 h1, h3, h5, h2, h4, h6 {
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: $Bebas;
 }
 p, a, span {
-  font-family: 'Roboto Slab', Georgia, Times, serif;
+  font-family: $Raleway;
 }
 
 h1 {
@@ -305,11 +115,15 @@ ul, ol, dl, dt, li {
 dd {
   margin-bottom: 0;
 }
+.quote,
+blockquote {
+  letter-spacing: 2px;
+}
 
 /** button styles **/
 a.button {
   color: white !important;
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: $Bebas;
   text-decoration: none !important;
   font-size: 18px;
   background-color: #0099D8;
@@ -355,7 +169,7 @@ a.button {
     content: '';
     display: inline-block;
     height: 20px;
-    width: 23px;
+    width: 20px;
     position: relative;
     background-image: image-url('ui/icon-contact.png');
     background-repeat: no-repeat;
@@ -375,8 +189,8 @@ a.button {
 /*** layout ***/
 html {
   @include breakpoint(notmobile){
-        &::-webkit-scrollbar { 
-        display: none; 
+        &::-webkit-scrollbar {
+        display: none;
     }
   }
 }
@@ -387,8 +201,8 @@ body { margin: 0; }
 nav#fixed {
   position: fixed;
   top: 0px;
-  width: 100%; 
-  height: 65px; 
+  width: 100%;
+  height: 65px;
   background-color: #f2f2f2;
   color: #242424;
   z-index: 9999;
@@ -419,7 +233,7 @@ nav#fixed {
         height: 32px;
         display: block;
         margin: 15px auto 0;
-      }    
+      }
     }
     .menu {
       @include flex(0 1 auto);
@@ -445,6 +259,9 @@ nav#fixed {
             @include breakpoint(mobile) {
               font-size: 4vw;
             }
+            @include breakpoint(huge) {
+              font-size: 26px;
+            }
             color: #242424;
             text-decoration: none;
             transition: color .5s;
@@ -461,6 +278,10 @@ nav#fixed {
             display: inline-block;
             height: 2vw;
             width: 2vw;
+            @include breakpoint(huge) {
+              height: 26px;
+              width: 26px;
+            }
             position: relative;
             background-image: image-url('ui/icon-contact-dark.png');
             background-repeat: no-repeat;
@@ -512,11 +333,12 @@ header {
   justify-content: center;
   // background-attachment: fixed;
   height: 50vh;
+  min-height: 340px;
   nav#main {
     @include flex(0 1 auto);
     @include order(0);
     margin: 0 auto;
-    h1 { 
+    h1 {
       a {
         font-size: 10vw;
         line-height: 1;
@@ -601,7 +423,7 @@ header {
 
 
 /***
-main layout 
+main layout
 ***/
 section[role=main] {
   padding: 0;
@@ -631,7 +453,7 @@ section[role=main] {
       p {
         font-size: 2vw;
         @include breakpoint(mobile) {
-          font-size: 3vw;        
+          font-size: 3vw;
         }
       }
     }
@@ -645,9 +467,9 @@ section[role=main] {
         width: 100%;
         background-image: image-url('bkgds/bkgd-codecrop.jpg');
         background-position: center center;
-        background-attachment: fixed; 
+        background-attachment: fixed;
         @include breakpoint(mid) {
-          background-attachment: scroll;        
+          background-attachment: scroll;
         }
         background-size: cover;
         background-repeat: repeat-x;
@@ -772,8 +594,8 @@ section {
       width: 100%;
       background-position: center center;
       background-attachment: fixed;
-      @include breakpoint(mobile) {
-        background-attachment: scroll;        
+      @include breakpoint(mid) {
+        background-attachment: scroll;
       }
       background-size: cover;
       h2 {
@@ -786,7 +608,7 @@ section {
         margin: 0 auto;
         line-height: 1.2;
         @include breakpoint(mobile) {
-          font-size: 3vw;        
+          font-size: 3vw;
         }
       }
     }
@@ -803,28 +625,29 @@ section {
     article {
       margin: 2em auto;
       padding: 0 10%;
-      @media screen and (min-width: 650px) {
-        padding: 0 20%;
-      }
-      @media screen and (min-width: 1150px) {
-        padding: 0 26%;
-      }
+      text-align: center;
       .processee {
         margin: 4em auto;
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        text-align: left;
+        @media screen and (min-width: 1550px) {
+          max-width: 700px;
+        }
         @include breakpoint(mobile) {
           margin: 1em auto;
         }
         .content {
           width: 100%;
-          max-width: 600px;
           display: block;
-          @media screen and (min-width: 1550px) {
-            max-width: 700px;
-          }
           h2 {
             line-height: 1;
             margin: 0;
             font-size: 5vw;
+            @include breakpoint(huge) {
+              font-size: 72px;
+            }
           }
           @include breakpoint(mobile) {
             width: 100%;
@@ -913,7 +736,7 @@ section {
             margin: 2em auto;
             h2, h3, h4 {
               text-align: center;
-              font-size: 8vw; 
+              font-size: 8vw;
             }
           }
           @media screen and (min-width: 850px) {
@@ -1167,7 +990,7 @@ section {
         }
         .content {
           text-align: center;
-          padding: 0 15%;
+          padding: 0 12%;
           @include breakpoint(mobile){
             padding: 0 5%;
           }
@@ -1179,7 +1002,7 @@ section {
           p {
             font-size: 2vw;
             @include breakpoint(mobile){
-              font-size: 3vw;        
+              font-size: 3vw;
             }
           }
         }
@@ -1196,9 +1019,9 @@ section {
         width: 100%;
         background-image: image-url('bkgds/bkgd-codecrop.jpg');
         background-position: center center;
-        background-attachment: fixed; 
-        @include breakpoint(mobile) {
-          background-attachment: scroll;        
+        background-attachment: fixed;
+        @include breakpoint(mid) {
+          background-attachment: scroll;
         }
         background-size: cover;
         background-repeat: repeat-x;
@@ -1251,7 +1074,7 @@ section {
             content: 'M2M';
             color: #fff;
             text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-            font-family: 'Bebas', Helvetica, sans-serif;
+            font-family: $Bebas;
             font-size: 7vw;
             display: block;
             position: absolute;
@@ -1277,7 +1100,7 @@ section {
             content: 'RMS';
             color: #fff;
             text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-            font-family: 'Bebas', Helvetica, sans-serif;
+            font-family: $Bebas;
             font-size: 7vw;
             display: block;
             position: absolute;
@@ -1303,7 +1126,7 @@ section {
             content: 'LM';
             color: #fff;
             text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-            font-family: 'Bebas', Helvetica, sans-serif;
+            font-family: $Bebas;
             font-size: 7vw;
             display: block;
             position: absolute;
@@ -1323,13 +1146,13 @@ section {
             font-size: 0;
           }
           .ati {
-            background-image: image-url('portfolio/web/ati-site-laptop.png'); 
+            background-image: image-url('portfolio/web/ati-site-laptop.png');
           }
           .ati::after {
             content: 'ATI';
             color: #fff;
             text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-            font-family: 'Bebas', Helvetica, sans-serif;
+            font-family: $Bebas;
             font-size: 7vw;
             display: block;
             position: absolute;
@@ -1502,7 +1325,7 @@ section {
           content: 'QC';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1525,7 +1348,7 @@ section {
           content: 'B&B';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1548,7 +1371,7 @@ section {
           content: 'D&D';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1571,7 +1394,7 @@ section {
           content: 'OC';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1594,7 +1417,7 @@ section {
           content: 'M2M';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1617,7 +1440,7 @@ section {
           content: 'DG';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1640,7 +1463,7 @@ section {
           content: 'SB';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1664,7 +1487,7 @@ section {
           content: 'Hers';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1687,7 +1510,7 @@ section {
           content: 'FGDP';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1710,7 +1533,7 @@ section {
           content: 'SVCV';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1733,7 +1556,7 @@ section {
           content: 'Soda';
           color: #fff;
           text-shadow: 3px 3px 0px rgba(0,0,0, .6);
-          font-family: 'Bebas', Helvetica, sans-serif;
+          font-family: $Bebas;
           font-size: 7vw;
           display: block;
           position: absolute;
@@ -1858,9 +1681,6 @@ section {
             color: #fff;
             h5 {
               color: #fff;
-              .quote {
-                font-family: inherit;
-              }
             }
           }
         }
@@ -1869,9 +1689,8 @@ section {
   }
 }
 
-
-/*** 
-footer 
+/***
+footer
 ***/
 footer {
   background-image: image-url('bkgds/bkgd-tweed.png');
@@ -1911,11 +1730,11 @@ footer {
           -webkit-transition: -webkit-filter 0.6s;
         }
         a[href*="dribbble"] {
-          background-image:image-url('soc-med/color/Dribbble.png');  
+          background-image:image-url('soc-med/color/Dribbble.png');
         }
-        a[href*="forrst"] {
-          background-image:image-url('soc-med/color/Forrst.png');
-        }
+        // a[href*="forrst"] {
+        //   background-image:image-url('soc-med/color/Forrst.png');
+        // }
         a[href*="tavern"] {
           background-image:image-url('soc-med/color/Forrst.png');
         }
@@ -1936,7 +1755,7 @@ footer {
         }
         a:hover,
         a:focus {
-          @include nofilter(); 
+          @include nofilter();
         }
       }
     }
@@ -1945,6 +1764,11 @@ footer {
     @include flex(0 1 auto);
     @include order(0);
     margin: auto;
+    .button {
+      font-size: 20px;
+      padding: 10px 18px;
+      letter-spacing: 1px;
+    }
   }
   .copyright {
     @include flex(0 1 auto);
@@ -1961,11 +1785,11 @@ footer {
   .backtotop::after {
     content: '';
     position: absolute;
-    right: 2%;
-    top: 45%;
+    right: 5%;
+    top: calc(50% - 9px);
     display: block;
     width: 32px;
-    height: 17px;
+    height: 18px;
     background-image: image-url('ui/backtotop-icon.png');
     background-repeat: no-repeat;
     background-size: contain;

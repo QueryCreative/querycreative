@@ -4,7 +4,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %title "Joshua J. Schmitz, Querycreative"
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
-    %meta{name: "copyright", content: "Joshua J. Schmitz, Querycreative © 2015"}
+    %meta{name: "copyright", content: "Joshua J. Schmitz, Querycreative © 2016"}
     %meta{name: "description", content: "Joshua J. Schmitz, D/B/A Querycreative, Web Developer"}
     %meta{name: "keywords", content: "Web Development, Coding, Design, Querycreative, UX/UI"}
     %meta{name: "DC.title", content: "Joshua J. Schmitz, Querycreative"}
@@ -18,28 +18,25 @@
     %meta{:content => "#D83434", :name => "msapplication-TileColor"}
     %meta{:content => "/images/favicon/tileicon.png", :name => "msapplication-TileImage"}
 
-    %link{:href => "/stylesheets/screen.css", :rel => "stylesheet"}
-    
     = render 'layouts/shim'
 
-    %script{src: "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
-    %link{href: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"}
-    %script{src: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"}
+    %link{:href => "/stylesheets/screen.css", :rel => "stylesheet"}
 
+    %script{src: "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
+    %script{src: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"}
     %script{src: "/javascripts/fixed-header.js"}
 
+    %link{href: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"}
     %link{href: "/slick/slick.css", rel: "stylesheet"}
     %link{href: "/slick/slick-theme.css", rel: "stylesheet"}
-
-    %script{src: "/lightbox/js/lightbox.min.js"}
     %link{href: "lightbox/css/lightbox.css", rel: "stylesheet"}
-        
+
   %body
     = render 'partials/nav'
     %header{:id => @title}
       %nav#main
         %h1=link_to @title, "/", class: "header-link"
-        
+
         .menu
           %ul
             %li= link_to "Services", "/services"
@@ -51,9 +48,10 @@
 
     %section{:role => "main", :id => @page}
       = yield
-  
+
     = render 'partials/footer'
 
+    %script{src: "/lightbox/js/lightbox.min.js"}
     %script{src:"slick/slick.min.js"}
     %script{src:"/javascripts/slick-init.js"}
 

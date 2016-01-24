@@ -1,7 +1,4 @@
-//
 // Basic layout and styles for site
-//
-
 header[role=banner] {
   background: $banner-color;
   @include background-image(
@@ -10,9 +7,7 @@ header[role=banner] {
   );
   padding: 20px $body-margin-x;
   position: relative;
-  
   a { @include basic-link(mix($banner-color, white, 20%), $hover: white, $decoration: "plain"); }
-  
   .action-link {
     position: absolute;
     right: $body-margin-x;
@@ -27,13 +22,11 @@ header[role=banner] {
     }
   }
 }
-
 section[role=main] {
   padding: 1px $body-margin-x;
 }
-
 body > footer {
-  padding: 0 $body-margin-x 20px;
+  padding: 0 10%;
   font-size: 90%;
   color: $quiet-color;
   a { @include basic-link($text-color); }

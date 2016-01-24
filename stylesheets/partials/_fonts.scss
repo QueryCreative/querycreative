@@ -1,4 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,400);
+// @import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700|Lato:400,300,700);
+// $Oswold: 'Oswald', Helvetica, sans-serif;
+// $Lato: 'Lato', Arial, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
+// @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,400);
 @font-face {
     font-family: 'BebasRegular';
     src: url('Bebas-webfont.eot');
@@ -8,5 +12,6 @@
          url('Bebas-webfont.svg#BebasRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
+$Bebas: 'Bebas', Helvetica, sans-serif;
+$Raleway: 'Raleway', sans-serif;

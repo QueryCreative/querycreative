@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* fonts */
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,400);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
 @font-face {
   font-family: 'Bebas';
   src: url("../fonts/Bebas/Bebas-webfont.eot");
@@ -251,7 +251,7 @@ section[role=main] {
 }
 
 body > footer {
-  padding: 0 15% 20px;
+  padding: 0 10%;
   font-size: 90%;
   color: #717171;
 }
@@ -529,20 +529,20 @@ blockquote:before,
 .quote:before,
 q:before {
   content: "\275D";
-  font-size: 90%;
+  font-size: 80%;
   padding-right: 0.2em;
   position: relative;
-  top: -2px;
+  top: -4px;
 }
 
 blockquote:after,
 .quote:after,
 q:after {
   content: "\275E";
-  font-size: 90%;
+  font-size: 80%;
   padding-left: 0.2em;
   position: relative;
-  top: -2px;
+  top: -4px;
 }
 
 /**** quick styles ****/
@@ -619,20 +619,16 @@ q:after {
 }
 
 .sans {
-  font-family: 'Bebas', Helvetica, sans-serif;
-}
-
-.serif {
-  font-family: 'Roboto Slab', Georgia, Times, serif;
+  font-family: "Bebas", Helvetica, sans-serif;
 }
 
 /*** type ***/
 h1, h3, h5, h2, h4, h6 {
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
 }
 
 p, a, span {
-  font-family: 'Roboto Slab', Georgia, Times, serif;
+  font-family: "Raleway", Arial, sans-serif;
 }
 
 h1 {
@@ -659,10 +655,15 @@ dd {
   margin-bottom: 0;
 }
 
+.quote,
+blockquote {
+  letter-spacing: 2px;
+}
+
 /** button styles **/
 a.button {
   color: white !important;
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   text-decoration: none !important;
   font-size: 18px;
   background-color: #0099D8;
@@ -711,7 +712,7 @@ a.button.contact-icon::before {
   content: '';
   display: inline-block;
   height: 20px;
-  width: 23px;
+  width: 20px;
   position: relative;
   background-image: url('../images/ui/icon-contact.png?1430855743');
   background-repeat: no-repeat;
@@ -848,6 +849,11 @@ nav#fixed .flex .menu ul li a {
     font-size: 4vw;
   }
 }
+@media (min-width: 1150px) {
+  nav#fixed .flex .menu ul li a {
+    font-size: 26px;
+  }
+}
 nav#fixed .flex .menu ul li a:hover, nav#fixed .flex .menu ul li a:focus {
   color: #ade;
 }
@@ -865,6 +871,12 @@ nav#fixed .flex .menu ul li .airplane-icon::after {
   background-size: cover;
   margin-right: .5em;
   top: 3px;
+}
+@media (min-width: 1150px) {
+  nav#fixed .flex .menu ul li .airplane-icon::after {
+    height: 26px;
+    width: 26px;
+  }
 }
 @media (max-width: 520px) {
   nav#fixed .flex .menu ul li .airplane-icon::after {
@@ -895,6 +907,7 @@ header {
   align-content: center;
   justify-content: center;
   height: 50vh;
+  min-height: 340px;
 }
 header#Querycreative {
   background-image: url('../images/bkgds/bkgd-bluespace.jpg?1430852493');
@@ -1004,7 +1017,7 @@ header nav#main .menu ul li ~ li {
   }
 }
 /***
-main layout 
+main layout
 ***/
 section[role=main] {
   padding: 0;
@@ -1208,7 +1221,7 @@ section#process .heading {
     padding: 16vw 0;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 849px) {
   section#process .heading {
     background-attachment: scroll;
   }
@@ -1237,19 +1250,19 @@ section#process.services .heading {
 section#process article {
   margin: 2em auto;
   padding: 0 10%;
-}
-@media screen and (min-width: 650px) {
-  section#process article {
-    padding: 0 20%;
-  }
-}
-@media screen and (min-width: 1150px) {
-  section#process article {
-    padding: 0 26%;
-  }
+  text-align: center;
 }
 section#process article .processee {
   margin: 4em auto;
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  text-align: left;
+}
+@media screen and (min-width: 1550px) {
+  section#process article .processee {
+    max-width: 700px;
+  }
 }
 @media (max-width: 520px) {
   section#process article .processee {
@@ -1258,18 +1271,17 @@ section#process article .processee {
 }
 section#process article .processee .content, section#process article .processee section[role=main] > article {
   width: 100%;
-  max-width: 600px;
   display: block;
-}
-@media screen and (min-width: 1550px) {
-  section#process article .processee .content, section#process article .processee section[role=main] > article {
-    max-width: 700px;
-  }
 }
 section#process article .processee .content h2, section#process article .processee section[role=main] > article h2 {
   line-height: 1;
   margin: 0;
   font-size: 5vw;
+}
+@media (min-width: 1150px) {
+  section#process article .processee .content h2, section#process article .processee section[role=main] > article h2 {
+    font-size: 72px;
+  }
 }
 @media (max-width: 520px) {
   section#process article .processee .content, section#process article .processee section[role=main] > article {
@@ -1657,7 +1669,7 @@ section#process article .processee .implementation::before {
 }
 #interactive section.work article .content, #interactive section.work article section[role=main] > article {
   text-align: center;
-  padding: 0 15%;
+  padding: 0 12%;
 }
 @media (max-width: 520px) {
   #interactive section.work article .content, #interactive section.work article section[role=main] > article {
@@ -1693,7 +1705,7 @@ section#process article .processee .implementation::before {
   animation: animatedBackground 50s linear infinite;
   -webkit-animation: animatedBackground 50s linear infinite;
 }
-@media (max-width: 520px) {
+@media (max-width: 849px) {
   #interactive section.websites h2.heading {
     background-attachment: scroll;
   }
@@ -1779,7 +1791,7 @@ section#process article .processee .implementation::before {
   content: 'M2M';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -1807,7 +1819,7 @@ section#process article .processee .implementation::before {
   content: 'RMS';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -1835,7 +1847,7 @@ section#process article .processee .implementation::before {
   content: 'LM';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -1863,7 +1875,7 @@ section#process article .processee .implementation::before {
   content: 'ATI';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2111,7 +2123,7 @@ section#process article .processee .implementation::before {
   content: 'QC';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2140,7 +2152,7 @@ section#process article .processee .implementation::before {
   content: 'B&B';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2169,7 +2181,7 @@ section#process article .processee .implementation::before {
   content: 'D&D';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2198,7 +2210,7 @@ section#process article .processee .implementation::before {
   content: 'OC';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2227,7 +2239,7 @@ section#process article .processee .implementation::before {
   content: 'M2M';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2256,7 +2268,7 @@ section#process article .processee .implementation::before {
   content: 'DG';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2285,7 +2297,7 @@ section#process article .processee .implementation::before {
   content: 'SB';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2314,7 +2326,7 @@ section#process article .processee .implementation::before {
   content: 'Hers';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2343,7 +2355,7 @@ section#process article .processee .implementation::before {
   content: 'FGDP';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2372,7 +2384,7 @@ section#process article .processee .implementation::before {
   content: 'SVCV';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2401,7 +2413,7 @@ section#process article .processee .implementation::before {
   content: 'Soda';
   color: #fff;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
-  font-family: 'Bebas', Helvetica, sans-serif;
+  font-family: "Bebas", Helvetica, sans-serif;
   font-size: 7vw;
   display: block;
   position: absolute;
@@ -2564,12 +2576,9 @@ section#process article .processee .implementation::before {
 #art .photography .slider .slide .image .caption h5 {
   color: #fff;
 }
-#art .photography .slider .slide .image .caption h5 .quote {
-  font-family: inherit;
-}
 
-/*** 
-footer 
+/***
+footer
 ***/
 footer {
   background-image: url('../images/bkgds/bkgd-tweed.png?1371499213');
@@ -2634,9 +2643,6 @@ footer .socmed ul li a {
 footer .socmed ul li a[href*="dribbble"] {
   background-image: url('../images/soc-med/color/Dribbble.png?1329886232');
 }
-footer .socmed ul li a[href*="forrst"] {
-  background-image: url('../images/soc-med/color/Forrst.png?1329886238');
-}
 footer .socmed ul li a[href*="tavern"] {
   background-image: url('../images/soc-med/color/Forrst.png?1329886238');
 }
@@ -2680,6 +2686,11 @@ footer .contact {
   order: 0;
   margin: auto;
 }
+footer .contact .button {
+  font-size: 20px;
+  padding: 10px 18px;
+  letter-spacing: 1px;
+}
 footer .copyright {
   -webkit-box-flex: 0 1 auto;
   -moz-box-flex: 0 1 auto;
@@ -2705,11 +2716,11 @@ footer .backtotop {
 footer .backtotop::after {
   content: '';
   position: absolute;
-  right: 2%;
-  top: 45%;
+  right: 5%;
+  top: calc(50% - 9px);
   display: block;
   width: 32px;
-  height: 17px;
+  height: 18px;
   background-image: url('../images/ui/backtotop-icon.png?1431921462');
   background-repeat: no-repeat;
   background-size: contain;
