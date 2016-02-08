@@ -1067,6 +1067,58 @@ section {
             @include transition(0.8s ease);
             border: 0 solid rgba(0,0,0,0);
           }
+          .ova {
+            background-image: image-url('portfolio/web/ova - addy.png');
+          }
+          .ova::after {
+            content: 'OVA';
+            color: #fff;
+            text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+            font-family: $Bebas;
+            font-size: 7vw;
+            display: block;
+            position: absolute;
+            top: -5vw;
+            left: -5vw;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            @include breakpoint(mobile) {
+              font-size: 12vw;
+              left: -6vw;
+            }
+          }
+          .ova:hover::after,
+          .ova:focus::after {
+            font-size: 0;
+          }
+          .net {
+            background-image: image-url('portfolio/web/netrality.png');
+          }
+          .net::after {
+            content: 'Net';
+            color: #fff;
+            text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+            font-family: $Bebas;
+            font-size: 7vw;
+            display: block;
+            position: absolute;
+            top: -5vw;
+            left: -5vw;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            @include breakpoint(mobile) {
+              font-size: 12vw;
+              left: -6vw;
+            }
+          }
+          .net:hover::after,
+          .net:focus::after {
+            font-size: 0;
+          }
           .m2m {
             background-image: image-url('portfolio/web/m2m-site-laptop.png');
           }
@@ -1364,6 +1416,77 @@ section {
         .bb:focus::after {
           font-size: 0;
         }
+
+        .cp {
+          background-image: image-url('portfolio/id/discovery-logos/coldplay-shirts.png');
+        }
+        .cp::after {
+          content: 'CP';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: $Bebas;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -3vw;
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
+            font-size: 12vw;
+            left: -8vw;
+          }
+        }
+        .cp:hover::after,
+        .cp:focus::after {
+          font-size: 0;
+        }
+        .fff {
+          background-image: image-url('portfolio/id/discovery-logos/fff-logos.png');
+        }
+        .fff::after {
+          content: 'FFF';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: $Bebas;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -3vw;
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
+            font-size: 12vw;
+            left: -8vw;
+          }
+        }
+        .fff:hover::after,
+        .fff:focus::after {
+          font-size: 0;
+        }
+        .al {
+          background-image: image-url('portfolio/id/discovery-logos/allegiant-logos.png');
+        }
+        .al::after {
+          content: 'ALG';
+          color: #fff;
+          text-shadow: 3px 3px 0px rgba(0,0,0, .6);
+          font-family: $Bebas;
+          font-size: 7vw;
+          display: block;
+          position: absolute;
+          top: -5vw;
+          left: -3vw;
+          @include transition(all 0.3s ease);
+          @include breakpoint(mobile){
+            font-size: 12vw;
+            left: -8vw;
+          }
+        }
+        .al:hover::after,
+        .al:focus::after {
+          font-size: 0;
+        }
+
         .dd {
           background-image: image-url('portfolio/id/discovery-logos/d&d-logo-progression.png');
         }
