@@ -1784,6 +1784,62 @@ section#process article .processee .implementation::before {
   transition: 0.8s ease;
   border: 0 solid transparent;
 }
+#interactive section.websites article .site .ova {
+  background-image: url('../images/portfolio/web/ova - addy.png?1453591738');
+}
+#interactive section.websites article .site .ova::after {
+  content: 'OVA';
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  font-family: "Bebas", Helvetica, sans-serif;
+  font-size: 7vw;
+  display: block;
+  position: absolute;
+  top: -5vw;
+  left: -5vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+@media (max-width: 520px) {
+  #interactive section.websites article .site .ova::after {
+    font-size: 12vw;
+    left: -6vw;
+  }
+}
+#interactive section.websites article .site .ova:hover::after,
+#interactive section.websites article .site .ova:focus::after {
+  font-size: 0;
+}
+#interactive section.websites article .site .net {
+  background-image: url('../images/portfolio/web/netrality.png?1453591771');
+}
+#interactive section.websites article .site .net::after {
+  content: 'Net';
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  font-family: "Bebas", Helvetica, sans-serif;
+  font-size: 7vw;
+  display: block;
+  position: absolute;
+  top: -5vw;
+  left: -5vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+@media (max-width: 520px) {
+  #interactive section.websites article .site .net::after {
+    font-size: 12vw;
+    left: -6vw;
+  }
+}
+#interactive section.websites article .site .net:hover::after,
+#interactive section.websites article .site .net:focus::after {
+  font-size: 0;
+}
 #interactive section.websites article .site .m2m {
   background-image: url('../images/portfolio/web/m2m-site-laptop.png?1430856964');
 }
@@ -2172,6 +2228,93 @@ section#process article .processee .implementation::before {
 }
 #identity .discovery article .identity-discovery .bb:hover::after,
 #identity .discovery article .identity-discovery .bb:focus::after {
+  font-size: 0;
+}
+#identity .discovery article .identity-discovery .cp {
+  background-image: url('../images/portfolio/id/discovery-logos/coldplay-shirts.png?1454735854');
+}
+#identity .discovery article .identity-discovery .cp::after {
+  content: 'CP';
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  font-family: "Bebas", Helvetica, sans-serif;
+  font-size: 7vw;
+  display: block;
+  position: absolute;
+  top: -5vw;
+  left: -3vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media (max-width: 520px) {
+  #identity .discovery article .identity-discovery .cp::after {
+    font-size: 12vw;
+    left: -8vw;
+  }
+}
+#identity .discovery article .identity-discovery .cp:hover::after,
+#identity .discovery article .identity-discovery .cp:focus::after {
+  font-size: 0;
+}
+#identity .discovery article .identity-discovery .fff {
+  background-image: url('../images/portfolio/id/discovery-logos/fff-logos.png?1454886896');
+}
+#identity .discovery article .identity-discovery .fff::after {
+  content: 'FFF';
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  font-family: "Bebas", Helvetica, sans-serif;
+  font-size: 7vw;
+  display: block;
+  position: absolute;
+  top: -5vw;
+  left: -3vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media (max-width: 520px) {
+  #identity .discovery article .identity-discovery .fff::after {
+    font-size: 12vw;
+    left: -8vw;
+  }
+}
+#identity .discovery article .identity-discovery .fff:hover::after,
+#identity .discovery article .identity-discovery .fff:focus::after {
+  font-size: 0;
+}
+#identity .discovery article .identity-discovery .al {
+  background-image: url('../images/portfolio/id/discovery-logos/allegiant-logos.png?1454886936');
+}
+#identity .discovery article .identity-discovery .al::after {
+  content: 'ALG';
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.6);
+  font-family: "Bebas", Helvetica, sans-serif;
+  font-size: 7vw;
+  display: block;
+  position: absolute;
+  top: -5vw;
+  left: -3vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media (max-width: 520px) {
+  #identity .discovery article .identity-discovery .al::after {
+    font-size: 12vw;
+    left: -8vw;
+  }
+}
+#identity .discovery article .identity-discovery .al:hover::after,
+#identity .discovery article .identity-discovery .al:focus::after {
   font-size: 0;
 }
 #identity .discovery article .identity-discovery .dd {
