@@ -1101,6 +1101,28 @@ section[role=main] article {
 #index section.work .imac {
   width: 280px !important;
 }
+#index section.work .toolbar {
+  min-width: 100vw;
+  margin: 2em 0 0 0;
+  padding: 3em 0 2em 0;
+  background-image: url('../images/bkgds/bkgd-noise.gif?1418751346');
+  background-repeat: repeat;
+}
+#index section.work .toolbar h3 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 42px;
+}
+#index section.work .toolbar .primary {
+  margin: 2.6em auto;
+  width: 90%;
+  max-width: 960px;
+}
+#index section.work .toolbar .adobe {
+  margin: 1em auto;
+  width: 90%;
+  max-width: 960px;
+}
 #index section.upcoming {
   background-image: url('../images/bkgds/bkgd-noise.gif?1418751346');
   background-repeat: repeat;
@@ -1118,6 +1140,7 @@ section[role=main] article {
   background-image: url('../images/bkgds/bkgd-holmeslake.jpg?1430852573');
   background-position: 44% center;
   background-size: cover;
+  margin-top: 0;
 }
 
 #index article.flex {
@@ -2786,6 +2809,9 @@ footer .socmed ul li a {
 footer .socmed ul li a[href*="dribbble"] {
   background-image: url('../images/soc-med/color/Dribbble.png?1329886232');
 }
+footer .socmed ul li a[href*="forrst"] {
+  background-image: url('../images/soc-med/color/Forrst.png?1329886238');
+}
 footer .socmed ul li a[href*="tavern"] {
   background-image: url('../images/soc-med/color/Forrst.png?1329886238');
 }
@@ -2807,6 +2833,9 @@ footer .socmed ul li a[href*="twitter"] {
 }
 footer .socmed ul li a[href*="linkedin"] {
   background-image: url('../images/soc-med/color/LinkedIn.png?1329886194');
+}
+footer .socmed ul li a[href*="github"] {
+  background-image: url('../images/soc-med/color/Github.png?1456532121');
 }
 footer .socmed ul li a:hover,
 footer .socmed ul li a:focus {

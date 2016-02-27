@@ -506,6 +506,29 @@ section[role=main] {
       .imac {
         width: 280px !important;
       }
+      .toolbar {
+        min-width: 100vw;
+        margin: 2em 0 0 0;
+        padding: 3em 0 2em 0;
+        background-image: image-url('bkgds/bkgd-noise.gif');
+        background-repeat: repeat;
+        h3 {
+          text-align: center;
+          margin: 0 auto;
+          font-size: 42px;
+        }
+        .primary {
+          margin: 2.6em auto;
+          width: 90%;
+          max-width: 960px;
+        }
+        .secondary {}
+        .adobe {
+          margin: 1em auto;
+          width: 90%;
+          max-width: 960px;
+        }
+      }
     }
     &.upcoming {
       background-image: image-url('bkgds/bkgd-noise.gif');
@@ -523,6 +546,7 @@ section[role=main] {
         background-image: image-url('bkgds/bkgd-holmeslake.jpg');
         background-position: 44% center;
         background-size: cover;
+        margin-top: 0;
       }
     }
   }
@@ -1855,9 +1879,9 @@ footer {
         a[href*="dribbble"] {
           background-image:image-url('soc-med/color/Dribbble.png');
         }
-        // a[href*="forrst"] {
-        //   background-image:image-url('soc-med/color/Forrst.png');
-        // }
+        a[href*="forrst"] {
+          background-image:image-url('soc-med/color/Forrst.png');
+        }
         a[href*="tavern"] {
           background-image:image-url('soc-med/color/Forrst.png');
         }
@@ -1876,6 +1900,10 @@ footer {
         a[href*="linkedin"] {
           background-image:image-url('soc-med/color/LinkedIn.png');
         }
+        a[href*="github"] {
+          background-image:image-url('soc-med/color/Github.png');
+        }
+
         a:hover,
         a:focus {
           @include nofilter();
